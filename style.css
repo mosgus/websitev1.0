@@ -29,15 +29,17 @@ body, html {
 }
 
 #atmosphere {
-    background-image: url('images/atmosphere.png');
+    background-image: url('images/atmosphere2.png');
     background-color: #182442;
-    background-attachment: scroll;
+    background-attachment: inherit;
+    background-size: max();
     background-position: center;
 }
 
 #sky {
     background-image: url('images/sky.png');
-    background-attachment: scroll;
     background-color: #87CEEB;
+    background-attachment: fixed;
+    background-position: center;
 }
 
