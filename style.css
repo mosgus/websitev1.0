@@ -24,33 +24,20 @@ body, html {
 /* Background images for scenes */
 #space {
     background-image: url('images/spaceBG.png');
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-color: black;
 }
 
-#space-sky {
-    background-image: url('images/bluedown.png');
+#atmosphere {
+    background-image: url('images/atmosphere.png');
     background-color: #182442;
+    background-attachment: scroll;
     background-position: center;
 }
 
 #sky {
-    background-image: url('images/skyBG.png');
+    background-image: url('images/sky.png');
     background-attachment: scroll;
     background-color: #87CEEB;
 }
 
-#land {
-    background-attachment: fixed;
-    background-color: #0b6623;
-}
-
-#ocean {
-    background-attachment: fixed;
-    background-color: #0077BE;
-}
-
-#deep-ocean {
-    background-attachment: fixed;
-    background-color: #000000;
-}
