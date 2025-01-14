@@ -29,7 +29,7 @@ body, html {
 
 /* Background images for scenes */
 #space {
-    background-image: url('images/space.jpg');
+    background-image: url('images/spaceBG.png');
     background-attachment: fixed;
     background-color: black;
 }
