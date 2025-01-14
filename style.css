@@ -1,0 +1,59 @@
+/* General Body Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+/* Full-screen sections */
+.scene {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Title styling */
+.title {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Background images for scenes */
+#space {
+    background-image: url('images/space.jpg');
+    background-attachment: fixed;
+    background-color: black;
+}
+
+#sky {
+    background-image: url('images/sky.jpg');
+    background-attachment: fixed;
+    background-color: #87CEEB;
+}
+
+#land {
+    background-image: url('images/mountains.jpg');
+    background-attachment: fixed;
+    background-color: #0b6623;
+}
+
+#ocean {
+    background-image: url('images/ocean.jpg');
+    background-attachment: fixed;
+    background-color: #0077BE;
+}
+
+#deep-ocean {
+    background-image: url('images/deep-sea.jpg');
+    background-attachment: fixed;
+    background-color: #000000;
+}
