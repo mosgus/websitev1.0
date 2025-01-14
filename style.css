@@ -34,8 +34,15 @@ body, html {
     background-color: black;
 }
 
+#space-sky {
+    background-image: url('images/bluedown.png');
+    background-attachment: unset;
+    background-color: #182442;
+}
+
 #sky {
-    background-attachment: fixed;
+    background-image: url('images/skyBG.png');
+    background-attachment: scroll;
     background-color: #87CEEB;
 }
 
