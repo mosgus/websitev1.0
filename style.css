@@ -43,9 +43,14 @@ section{
     align-items: center;
 }
 
+
 #intro .message {
+    font-size: 2em;
     font-family: 'Roboto Mono', sans-serif;
     color: seashell;
-    font-size: 2em;
 }
-
+#intro .typed-cursor {
+    font-size: 2em;
+    font-family: 'Roboto Mono', sans-serif;
+    color: seashell;
+}
