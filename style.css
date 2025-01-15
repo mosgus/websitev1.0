@@ -26,13 +26,10 @@ body{
 #header .logo{
     font-family: 'Press Start 2P', sans-serif;
     color: lightgreen;
-    font-size: 1.5em;
+    font-size: 2em;
     text-decoration: none;
     position: fixed;
 }
-
-
-
 
 section{
     position: relative;
@@ -43,14 +40,33 @@ section{
     align-items: center;
 }
 
-
 #intro .message {
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: 'Roboto Mono', sans-serif;
-    color: seashell;
+    color: #dbffdb;
 }
 #intro .typed-cursor {
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: 'Roboto Mono', sans-serif;
+    color: #dbffdb;
+}
+
+#overview {
+    display: flex;
+    justify-content: flex-start;  /* Align horizontally to the left */
+    align-items: flex-start;  /* Align vertically to the top */
+    padding: 20px;  /* Optional padding for some space around the text */
+}
+
+#overview .title {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 2.5em;
     color: seashell;
+    margin: 0;  /* Remove default margin */
+}
+
+#overview .typed-cursor {
+    font-size: 2.5em;
+    font-family: 'Roboto Mono', sans-serif;
+    color: #dbffdb;
 }

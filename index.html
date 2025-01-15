@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunnar's Webpage</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" >
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header id="header">
     <a href="#" class="logo" id="logo">Gunnar B</a>
-    <ul>
-        <!--
-        <a href="#filepath" class="active">About</a>
-        <a href="#" class="active">Projects</a>
-        <a href="#" class="active">Links</a>
-        -->
-    </ul>
 </header>
 
 <!-- Intro Section -->
@@ -24,9 +18,9 @@
     <h1 class="message" id="typing-title"></h1>
 </section>
 
-<!-- Sky Section -->
-<section class="scene" id="sky">
-    <h1 class="title">Entering the Sky</h1>
+<!-- Overview Section -->
+<section class="scene" id="overview">
+    <h1 class="title" id="typedBG">Welcome</h1>
 </section>
 
 </body>
@@ -36,39 +30,38 @@
 <!-- Load library from the CDN -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
-    var typed = new Typed('#typing-title', {
-        strings: ['Hello World.', 'Welcome to my personal webpage.', 'Take a look at my portfolio.', 'Demo my projects.'], // Texts to type
+    new Typed('#typing-title', {
+        strings: ['🦧','Hello World.', 'Welcome to my personal webpage!', 'Take a look at my portfolio.', 'Demo my projects.'], // Texts to type
         typeSpeed: 100, // Speed of typing
         backSpeed: 50,  // Speed when deleting
         backDelay: 2000, // Pause before backspacing
         startDelay: 1000, // Initial delay before typing starts
         loop: true,  // Enable looping of the animation
     });
+
+    new Typed('#typedBG', {
+        strings: ['📊','Overview','Background', 'Who Am I?'], typeSpeed: 100, backSpeed: 75, backDelay: 2000, startDelay: 1000, loop: true,
+    });
 </script>
+
 <script>
     let logo = document.getElementById('logo');
     let typedintro = document.getElementById('intro');
 
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
-
-        if (scrollValue > 60) {  // Intro section
-            logo.style.transform = `translateX(-300px)`;  // Moves left
-            logo.style.opacity = `${1 - (scrollValue) / 100}`;  // Fade out
-            logo.style.transition = 'all 1.5s ease';
-        } else {
-            logo.style.transform = `translateX(0px)`;  // Reset position
-            logo.style.opacity = '1';  // Fully visible
-            logo.style.transition = 'all 2s ease';
+        if (scrollValue > 60 ) {  // Intro section
+            logo.style.transform = `translateX(${60-(scrollValue)}px)`;
         }
 
-        if (scrollValue > 100) {  // Typed intro animation
-            typedintro.style.transform = `translateY(-300px)`;  // Moves left
-            typedintro.style.opacity = `0.1`;  // Fade out
-            typedintro.style.transition = 'all 1.5s ease';  // Use style
+
+        if (scrollValue > 150) {
+            typedintro.style.transform = `translateY(-300px)`;
+            typedintro.style.opacity = `0`;
+            typedintro.style.transition = 'all 1.5s ease';
         } else {
-            typedintro.style.transform = `translateY(0px)`;  // Reset position
-            typedintro.style.opacity = `1`;  // Fully visible
+            typedintro.style.transform = `translateY(0px)`;
+            typedintro.style.opacity = `1`;
             typedintro.style.transition = 'all 1.5s ease';
         }
     });
