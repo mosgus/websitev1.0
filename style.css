@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
 *{
     margin: 0;
@@ -29,6 +30,7 @@ body{
     font-size: 2em;
     text-decoration: none;
     position: fixed;
+    text-shadow: #1f512e -10px 6px;
 }
 
 section{
@@ -44,6 +46,7 @@ section{
     font-size: 2.5em;
     font-family: 'Roboto Mono', sans-serif;
     color: #dbffdb;
+    text-shadow: #659565 -10px 10px;
 }
 #intro .typed-cursor {
     font-size: 2.5em;
@@ -59,14 +62,9 @@ section{
 }
 
 #overview .title {
-    font-family: 'Roboto Mono', sans-serif;
-    font-size: 2.5em;
-    color: seashell;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 3.5em;
+    color: #ffef00;
     margin: 0;  /* Remove default margin */
-}
-
-#overview .typed-cursor {
-    font-size: 2.5em;
-    font-family: 'Roboto Mono', sans-serif;
-    color: #dbffdb;
+    text-shadow: #478c5c -6px 6px;
 }

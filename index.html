@@ -20,7 +20,7 @@
 
 <!-- Overview Section -->
 <section class="scene" id="overview">
-    <h1 class="title" id="typedBG">Welcome</h1>
+    <h1 class="title" id="BGtitle">Who am I?</h1>
 </section>
 
 </body>
@@ -39,30 +39,40 @@
         loop: true,  // Enable looping of the animation
     });
 
-    new Typed('#typedBG', {
+    new Typed('#X', {
         strings: ['📊','Overview','Background', 'Who Am I?'], typeSpeed: 100, backSpeed: 75, backDelay: 2000, startDelay: 1000, loop: true,
     });
 </script>
 
 <script>
+    let body = document.body;
     let logo = document.getElementById('logo');
     let typedintro = document.getElementById('intro');
 
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
         if (scrollValue > 60 ) {  // Intro section
-            logo.style.transform = `translateX(${60-(scrollValue)}px)`;
+            logo.style.transform = `translateX(${(60-(scrollValue))*0.6}px)`;
         }
 
-
-        if (scrollValue > 150) {
+        if (scrollValue > 180) {
             typedintro.style.transform = `translateY(-300px)`;
             typedintro.style.opacity = `0`;
             typedintro.style.transition = 'all 1.5s ease';
         } else {
+
             typedintro.style.transform = `translateY(0px)`;
             typedintro.style.opacity = `1`;
             typedintro.style.transition = 'all 1.5s ease';
+
+        }
+
+        if (scrollValue >= 650 && scrollValue < 800) {
+            body.style.background = "#3d5a80";  // Blue
+            body.style.transition = 'all 1s ease';
+        } else {
+            body.style.background = "#639e65"; // default green
+            body.style.transition = 'all 1s ease';
         }
     });
 </script>
