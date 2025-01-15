@@ -17,7 +17,6 @@ body{
     position: absolute;
     font-size: 1.2em;
     top: 0;
-    left: 0;
     width: 100%;
     padding: 25px 50px;
     display: flex;
@@ -26,10 +25,10 @@ body{
 
 #header .logo{
     font-family: 'Press Start 2P', sans-serif;
-    color: burlywood;
-    font-weight: 700;
+    color: lightgreen;
     font-size: 1.5em;
     text-decoration: none;
+    position: fixed;
 }
 
 
@@ -46,7 +45,7 @@ section{
 
 #intro .message {
     font-family: 'Roboto Mono', sans-serif;
-    color: antiquewhite;
+    color: seashell;
     font-size: 2em;
 }
 
