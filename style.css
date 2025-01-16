@@ -94,9 +94,15 @@ section{
 }
 
 #overview .BGtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     font-family: 'Roboto Mono', sans-serif;
     font-size: 1.0em;
     color: #dbffdb;
+
 }
 
 #overview .BGdesc {
@@ -113,6 +119,4 @@ section{
     border-radius: 50%;  /* Circular shape */
     object-fit: cover;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-
-
 }

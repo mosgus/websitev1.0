@@ -27,7 +27,7 @@
 <section class="scene" id="overview">
     <h1 class="BGtitle" id="BGtitle">Overview</h1>
     <div class="BGtext">
-        <p class="BGdesc"> Yo my name Gunnar I have nuts</p>
+        <p class="BGdesc"> I grew up in Atlanta Georgia.   </p>
         <img src="images/pfp.png" alt="Gunnar's profile picture" class="pfp">
     </div>
 </section>
@@ -61,44 +61,40 @@
 
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
+        let viewportHeight = window.innerHeight;
+        let totalHeight = document.body.scrollHeight - viewportHeight;
+        // Normalize scroll value to a percentage (0 to 1)
+        let scrollPercentage = scrollValue / totalHeight;
 
         /** Introduction section */
-        if (scrollValue > 60 ) {  // Intro section
-            logo.style.transform = `translateX(${(60-(scrollValue))*0.9}px)`;
-        }
-        if (scrollValue > 180) {
+        if (scrollPercentage > 0.1) {
+            logo.style.transform = `translateX(${(60 - (scrollValue)) * 1.1}px)`;
             typedintro.style.transform = `translateY(-300px)`;
             typedintro.style.opacity = `0`;
             typedintro.style.transition = 'all 1.5s ease';
-            logo.style.opacity = `0`;
-            logo.style.transition = 'opacity 1.0s ease';
         } else {
             typedintro.style.transform = `translateY(0px)`;
             typedintro.style.opacity = `1`;
             typedintro.style.transition = 'all 1.5s ease';
-            logo.style.opacity = `1`;
-            logo.style.transition = 'all 1.5s ease';
-
-
         }
 
-        /** Overview section */
-        if (scrollValue >= 600 && scrollValue < 1000) {
+        /** Overview section (starts at 30% and ends at 50%) */
+        if (scrollPercentage >= 0.3) {
             body.style.background = "#6294cf";  // Blue
-            body.style.transition = 'all 1s ease';
+            body.style.transition = 'all 1.5s ease';
 
             BGtitle.style.transform = `translateX(0px)`;
             BGtitle.style.opacity = `1`;
             BGtitle.style.transition = 'all 1s ease';
         } else {
-            body.style.background = "#639e65"; // default green
-            body.style.transition = 'all 1s ease';
+            body.style.background = "#639e65"; // Default green
+            body.style.transition = 'all 1.5s ease';
 
             BGtitle.style.transform = `translateX(-300px)`;
             BGtitle.style.opacity = `0`;
             BGtitle.style.transition = 'all 1s ease';
-
         }
+
     });
 
     window.addEventListener('load', function () {
