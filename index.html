@@ -10,7 +10,7 @@
 <body>
 
 <header id="header">
-    <a href="#" class="logo" id="logo">Gunnar B.</a>
+    <a href="#" class="logo" id="logo">Gunnar Balch</a>
 </header>
 
 <!-- Intro Section -->
@@ -25,7 +25,7 @@
 
 <!-- Overview Section -->
 <section class="scene" id="overview">
-    <h1 class="title" id="BGtitle">Overview</h1>
+    <h1 class="BGtitle" id="BGtitle">Overview</h1>
 </section>
 
 </body>
@@ -36,7 +36,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
     new Typed('#typing-title', {
-        strings: ['🦧','Hello World.', 'Welcome to my personal webpage!', 'Take a look at my portfolio.', 'Demo my projects.'], // Texts to type
+        strings: ['Hello World.', 'Welcome to my webpage!', 'This is my portfolio.', 'Demo my projects.', 'See my dog 🐕.', 'I like sushi.'], // Texts to type
         typeSpeed: 100, // Speed of typing
         backSpeed: 50,  // Speed when deleting
         backDelay: 2000, // Pause before backspacing
@@ -53,45 +53,62 @@
     let body = document.body;
     let logo = document.getElementById('logo');
     let typedintro = document.getElementById('intro');
+    let BGtitle = document.getElementById('BGtitle');
 
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
 
-
+        /** Introduction section */
         if (scrollValue > 60 ) {  // Intro section
-            logo.style.transform = `translateX(${(60-(scrollValue))*0.6}px)`;
+            logo.style.transform = `translateX(${(60-(scrollValue))*0.8}px)`;
         }
-
         if (scrollValue > 180) {
             typedintro.style.transform = `translateY(-300px)`;
             typedintro.style.opacity = `0`;
             typedintro.style.transition = 'all 1.5s ease';
         } else {
-
             typedintro.style.transform = `translateY(0px)`;
             typedintro.style.opacity = `1`;
             typedintro.style.transition = 'all 1.5s ease';
 
         }
 
+        /** Overview section */
         if (scrollValue >= 600 && scrollValue < 1000) {
             body.style.background = "#6294cf";  // Blue
             body.style.transition = 'all 0.5s ease';
+
+            BGtitle.style.transform = `translateX(0px)`;
+            BGtitle.style.opacity = `1`;
+            BGtitle.style.transition = 'all 1s ease';
         } else {
             body.style.background = "#639e65"; // default green
             body.style.transition = 'all 0.5s ease';
+
+            BGtitle.style.transform = `translateX(-300px)`;
+            BGtitle.style.opacity = `0`;
+            BGtitle.style.transition = 'all 1s ease';
+
         }
     });
 
     window.addEventListener('load', function () {
         const scrollGif = document.querySelector('.scroll-gif');
+        const logo = document.querySelector('.logo');
+        const BGtitle = document.querySelector('.BGtitle');
+
+        BGtitle.style.transform = `translateX(-200px)`;
+
+        scrollGif.style.transition = 'opacity 10s ease';
+        logo.style.transition = 'opacity 10s ease';
 
 
-        scrollGif.style.transition = 'opacity 5s ease';
 
-        // Show the GIF after 10 seconds (10000 milliseconds)
+        setTimeout(() => {
+            logo.style.opacity = '1';
+        }, 2500);
         setTimeout(() => {
             scrollGif.style.opacity = '1';  // Make it visible
-        }, 18000);  // 10 seconds delay
+        }, 18000);
     });
 </script>

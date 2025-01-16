@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
 *{
-    margin: 0;
+    margin: 10px;
     padding: 0;
     box-sizing: border-box;
 }
 
 body{
     overflow-x: hidden;
-    background: #639e65;
+    background: #639e65; /* default green 639e65  */
     min-height: 100vh;
 }
 
@@ -31,6 +31,7 @@ body{
     text-decoration: none;
     position: fixed;
     text-shadow: #1f512e -10px 6px;
+    opacity: 0;
 }
 
 section{
@@ -63,7 +64,7 @@ section{
 }
 
 #intro .typed-cursor {
-    font-size: 2.5em;  /* Same size as the message to match */
+    font-size: 4em;  /* Same size as the message to match */
     color: #dbffdb;  /* Same color as the text */
 }
 
@@ -84,10 +85,12 @@ section{
     padding: 20px;  /* Optional padding for some space around the text */
 }
 
-#overview .title {
+#overview .BGtitle {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 3.5em;
-    color: #ffef00;
+    color: #446291;
     margin: 0;  /* Remove default margin */
-    text-shadow: #21537a -6px 6px;
+    text-shadow: #618daf -8px 8px;
+
+    opacity: 0;
 }
