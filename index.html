@@ -10,17 +10,22 @@
 <body>
 
 <header id="header">
-    <a href="#" class="logo" id="logo">Gunnar B</a>
+    <a href="#" class="logo" id="logo">Gunnar B.</a>
 </header>
 
 <!-- Intro Section -->
 <section class="scene" id="intro">
-    <h1 class="message" id="typing-title"></h1>
+    <div class="message-wrapper">
+        <h1 class="message" id="typing-title"></h1>
+    </div>
+    <div class="scroll-gif">
+        <img src="images/scroll-down-mouse.gif" alt="Loading..." id="loading-gif">
+    </div>
 </section>
 
 <!-- Overview Section -->
 <section class="scene" id="overview">
-    <h1 class="title" id="BGtitle">Who am I?</h1>
+    <h1 class="title" id="BGtitle">Overview</h1>
 </section>
 
 </body>
@@ -51,6 +56,8 @@
 
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
+
+
         if (scrollValue > 60 ) {  // Intro section
             logo.style.transform = `translateX(${(60-(scrollValue))*0.6}px)`;
         }
@@ -67,12 +74,24 @@
 
         }
 
-        if (scrollValue >= 650 && scrollValue < 800) {
-            body.style.background = "#3d5a80";  // Blue
-            body.style.transition = 'all 1s ease';
+        if (scrollValue >= 600 && scrollValue < 1000) {
+            body.style.background = "#6294cf";  // Blue
+            body.style.transition = 'all 0.5s ease';
         } else {
             body.style.background = "#639e65"; // default green
-            body.style.transition = 'all 1s ease';
+            body.style.transition = 'all 0.5s ease';
         }
+    });
+
+    window.addEventListener('load', function () {
+        const scrollGif = document.querySelector('.scroll-gif');
+
+
+        scrollGif.style.transition = 'opacity 5s ease';
+
+        // Show the GIF after 10 seconds (10000 milliseconds)
+        setTimeout(() => {
+            scrollGif.style.opacity = '1';  // Make it visible
+        }, 18000);  // 10 seconds delay
     });
 </script>

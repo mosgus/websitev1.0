@@ -42,16 +42,39 @@ section{
     align-items: center;
 }
 
+#intro {
+    display: flex;
+    flex-direction: column;  /* Stack message and scroll GIF vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+#intro .message-wrapper {
+    display: inline-flex;  /* Ensure text and cursor stay inline */
+    justify-content: center;
+    align-items: center;
+}
+
 #intro .message {
     font-size: 2.5em;
     font-family: 'Roboto Mono', sans-serif;
     color: #dbffdb;
     text-shadow: #659565 -10px 10px;
 }
+
 #intro .typed-cursor {
-    font-size: 2.5em;
-    font-family: 'Roboto Mono', sans-serif;
-    color: #dbffdb;
+    font-size: 2.5em;  /* Same size as the message to match */
+    color: #dbffdb;  /* Same color as the text */
+}
+
+#intro .scroll-gif {
+    margin-top: 20px;  /* Adds space between the message and GIF */
+    opacity: 0;
+}
+
+#loading-gif {
+    width: 60px;  /* Smaller size for the GIF */
+    height: 60px;
 }
 
 #overview {
@@ -66,5 +89,5 @@ section{
     font-size: 3.5em;
     color: #ffef00;
     margin: 0;  /* Remove default margin */
-    text-shadow: #478c5c -6px 6px;
+    text-shadow: #21537a -6px 6px;
 }
