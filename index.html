@@ -26,6 +26,10 @@
 <!-- Overview Section -->
 <section class="scene" id="overview">
     <h1 class="BGtitle" id="BGtitle">Overview</h1>
+    <div class="BGtext">
+        <p class="BGdesc"> Yo my name Gunnar I have nuts</p>
+        <img src="images/pfp.png" alt="Gunnar's profile picture" class="pfp">
+    </div>
 </section>
 
 </body>
@@ -36,7 +40,7 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
     new Typed('#typing-title', {
-        strings: ['Hello World.', 'Welcome to my webpage!', 'This is my portfolio.', 'Demo my projects.', 'See my dog 🐕.', 'I like sushi.'], // Texts to type
+        strings: ['🏀','Hello World.', 'Welcome to my webpage!', 'This is my portfolio.', 'Demo my projects.', 'See my dog 🐕.', 'I like sushi.'], // Texts to type
         typeSpeed: 100, // Speed of typing
         backSpeed: 50,  // Speed when deleting
         backDelay: 2000, // Pause before backspacing
@@ -60,30 +64,35 @@
 
         /** Introduction section */
         if (scrollValue > 60 ) {  // Intro section
-            logo.style.transform = `translateX(${(60-(scrollValue))*0.8}px)`;
+            logo.style.transform = `translateX(${(60-(scrollValue))*0.9}px)`;
         }
         if (scrollValue > 180) {
             typedintro.style.transform = `translateY(-300px)`;
             typedintro.style.opacity = `0`;
             typedintro.style.transition = 'all 1.5s ease';
+            logo.style.opacity = `0`;
+            logo.style.transition = 'opacity 1.0s ease';
         } else {
             typedintro.style.transform = `translateY(0px)`;
             typedintro.style.opacity = `1`;
             typedintro.style.transition = 'all 1.5s ease';
+            logo.style.opacity = `1`;
+            logo.style.transition = 'all 1.5s ease';
+
 
         }
 
         /** Overview section */
         if (scrollValue >= 600 && scrollValue < 1000) {
             body.style.background = "#6294cf";  // Blue
-            body.style.transition = 'all 0.5s ease';
+            body.style.transition = 'all 1s ease';
 
             BGtitle.style.transform = `translateX(0px)`;
             BGtitle.style.opacity = `1`;
             BGtitle.style.transition = 'all 1s ease';
         } else {
             body.style.background = "#639e65"; // default green
-            body.style.transition = 'all 0.5s ease';
+            body.style.transition = 'all 1s ease';
 
             BGtitle.style.transform = `translateX(-300px)`;
             BGtitle.style.opacity = `0`;
@@ -94,19 +103,13 @@
 
     window.addEventListener('load', function () {
         const scrollGif = document.querySelector('.scroll-gif');
-        const logo = document.querySelector('.logo');
+        //const logo = document.querySelector('.logo');
         const BGtitle = document.querySelector('.BGtitle');
 
         BGtitle.style.transform = `translateX(-200px)`;
 
         scrollGif.style.transition = 'opacity 10s ease';
-        logo.style.transition = 'opacity 10s ease';
 
-
-
-        setTimeout(() => {
-            logo.style.opacity = '1';
-        }, 2500);
         setTimeout(() => {
             scrollGif.style.opacity = '1';  // Make it visible
         }, 18000);

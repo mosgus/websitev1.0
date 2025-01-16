@@ -16,10 +16,9 @@ body{
 
 #header{
     position: absolute;
-    font-size: 1.2em;
     top: 0;
     width: 100%;
-    padding: 25px 50px;
+    padding: 25px 25px;
     display: flex;
     justify-content: space-between;
 }
@@ -27,11 +26,10 @@ body{
 #header .logo{
     font-family: 'Press Start 2P', sans-serif;
     color: lightgreen;
-    font-size: 2em;
+    font-size: 2.0em;
     text-decoration: none;
     position: fixed;
     text-shadow: #1f512e -10px 6px;
-    opacity: 0;
 }
 
 section{
@@ -80,17 +78,41 @@ section{
 
 #overview {
     display: flex;
-    justify-content: flex-start;  /* Align horizontally to the left */
-    align-items: flex-start;  /* Align vertically to the top */
-    padding: 20px;  /* Optional padding for some space around the text */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 50px;
 }
 
 #overview .BGtitle {
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: 3.5em;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2.0em;
     color: #446291;
-    margin: 0;  /* Remove default margin */
     text-shadow: #618daf -8px 8px;
 
     opacity: 0;
+}
+
+#overview .BGtext {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1.0em;
+    color: #dbffdb;
+}
+
+#overview .BGdesc {
+    flex: 1;  /* Take up available space on the left */
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1.2em;
+    color: #dbffdb;
+
+}
+
+#overview .pfp {
+    width: 200px;  /* Width of the profile picture */
+    height: 200px;
+    border-radius: 50%;  /* Circular shape */
+    object-fit: cover;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+
+
 }
