@@ -27,7 +27,12 @@
 <section class="scene" id="overview">
     <h1 class="BGtitle" id="BGtitle">Overview</h1>
     <div class="BGtext">
-        <p class="BGdesc"> I grew up in Atlanta Georgia.   </p>
+        <p class="BGdesc"> I grew up in Atlanta Georgia. As a kid I found a passion for coding through building Lego Mindstorm robots.
+            In high school I took an Advanced Robotics class as well as AP Computer Science.
+            I attended Georgia State University from 2019 - 2021 as a physics major.
+            I changed my major to Computer Science and transferred to the University of Georgia in the summer of '21.
+
+             </p>
         <img src="images/pfp.png" alt="Gunnar's profile picture" class="pfp">
     </div>
 </section>
@@ -67,12 +72,19 @@
         let scrollPercentage = scrollValue / totalHeight;
 
         /** Introduction section */
-        if (scrollPercentage > 0.1) {
-            logo.style.transform = `translateX(${(60 - (scrollValue)) * 1.1}px)`;
+        if (scrollPercentage > 0.2) {
+            logo.style.transform = `translateX(-400px)`;
+            logo.style.opacity = `0`;
+            logo.style.transition = 'all 1s ease';
+
             typedintro.style.transform = `translateY(-300px)`;
             typedintro.style.opacity = `0`;
             typedintro.style.transition = 'all 1.5s ease';
         } else {
+            logo.style.transform = `translateX(0px)`;
+            logo.style.opacity = `1`;
+            logo.style.transition = 'all 1.5s ease';
+
             typedintro.style.transform = `translateY(0px)`;
             typedintro.style.opacity = `1`;
             typedintro.style.transition = 'all 1.5s ease';
@@ -85,14 +97,14 @@
 
             BGtitle.style.transform = `translateX(0px)`;
             BGtitle.style.opacity = `1`;
-            BGtitle.style.transition = 'all 1s ease';
+            BGtitle.style.transition = 'all 1.5s ease';
         } else {
             body.style.background = "#639e65"; // Default green
             body.style.transition = 'all 1.5s ease';
 
-            BGtitle.style.transform = `translateX(-300px)`;
+            BGtitle.style.transform = `translateX(-500px)`;
             BGtitle.style.opacity = `0`;
-            BGtitle.style.transition = 'all 1s ease';
+            BGtitle.style.transition = 'all 1.5s ease';
         }
 
     });
@@ -102,7 +114,7 @@
         //const logo = document.querySelector('.logo');
         const BGtitle = document.querySelector('.BGtitle');
 
-        BGtitle.style.transform = `translateX(-200px)`;
+        BGtitle.style.transform = `translateX(-500px)`;
 
         scrollGif.style.transition = 'opacity 10s ease';
 

@@ -114,8 +114,8 @@ section{
 }
 
 #overview .pfp {
-    width: 200px;  /* Width of the profile picture */
-    height: 200px;
+    width: 400px;  /* Width of the profile picture */
+    height: 400px;
     border-radius: 50%;  /* Circular shape */
     object-fit: cover;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
