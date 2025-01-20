@@ -107,7 +107,7 @@ section{
 
 }
 
-#overview .BGdesc {
+#overview .BGintro {
     flex: 1;  /* Take up available space on the left */
     font-family: 'Roboto Mono', sans-serif;
     font-size: 1.2em;
@@ -128,7 +128,7 @@ section{
 
     #overview .BGtitle {
         font-family: 'Press Start 2P', sans-serif;
-        font-size: 1.8em;
+        font-size: 1.6em;
         color: lightgreen;
         text-shadow: #1f512e -8px 8px;
         opacity: 0;
@@ -139,13 +139,12 @@ section{
         flex-direction: column; /* Stack text and image vertically */
         justify-content: center; /* Center items */
         align-items: center; /* Center items horizontally */
-        padding: 20px 0px; /* Reduce padding */
+        padding: 20px; /* Reduce padding */
         gap: 15px; /* Adjust spacing between elements */
     }
 
-    #overview .BGdesc {
+    #overview .BGintro {
         font-size: 1em; /* Reduce font size for readability */
-
     }
 
     #overview .pfp {
