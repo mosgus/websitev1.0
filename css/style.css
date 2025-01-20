@@ -137,7 +137,7 @@ section{
 
     #overview .BGtitle {
         font-family: 'Press Start 2P', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.4em;
         color: lightgreen;
         text-shadow: #1f512e -8px 8px;
         opacity: 0;
@@ -159,7 +159,11 @@ section{
     }
 
     #overview .pfp {
-        width: 180px; /* Adjust the size of the profile picture */
-        height: auto; /* Maintain aspect ratio */
+        width: 60vw; /* Dynamically scale width to 25% of the viewport width */
+        max-width: 180px; /* Set a maximum size for smaller screens */
+        height: auto; /* Maintain the aspect ratio */
+        margin: 0 auto; /* Center the image horizontally */
+        border-radius: 12%; /* Rounded edges */
+        object-fit: cover; /* Ensures the image fits nicely */
     }
 }
