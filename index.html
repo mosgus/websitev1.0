@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gunnar's Webpage</title>
     <link rel="icon" type="image/png" href="images/favicon.png" >
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header id="header">
     <a href="#" class="logo" id="logo">Gunnar Balch</a>
+
 </header>
 
 <!-- Intro Section -->
@@ -25,21 +26,24 @@
 
 <!-- Overview Section -->
 <section class="scene" id="overview">
-    <h1 class="BGtitle" id="BGtitle">Overview</h1>
-    <div class="BGtext">
-        <p class="BGdesc"> I grew up in Atlanta Georgia. As a kid I found a passion for coding through building Lego Mindstorm robots.
-            In high school I took an Advanced Robotics class as well as AP Computer Science.
-            I attended Georgia State University from 2019 - 2021 as a physics major.
-            I changed my major to Computer Science and transferred to the University of Georgia in the summer of '21.
-
-             </p>
-        <img src="images/pfp.png" alt="Gunnar's profile picture" class="pfp">
+    <h1 class="BGtitle" id="BGtitle">Who Am I?</h1>
+    <div class="BGtp">
+        <img src="images/manuela.png" alt="Gunnar's profile picture" class="pfp">
+        <p class="BGdesc">
+            BGdesc
+        </p>
     </div>
+    <p>
+        I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
+        I attended Georgia State University from 2019 - 2021 as a physics major, though I
+        changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
+        I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
+        I hope to nurture a career in Computational Finance.
+    </p>
 </section>
 
 </body>
 </html>
-
 
 <!-- Load library from the CDN -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -79,32 +83,35 @@
 
             typedintro.style.transform = `translateY(-300px)`;
             typedintro.style.opacity = `0`;
-            typedintro.style.transition = 'all 1.5s ease';
+            typedintro.style.transition = 'all 1s ease';
         } else {
+            //body.style.background = "#639e65"; // Default green
+            //body.style.transition = 'all 2.0s ease';
+
             logo.style.transform = `translateX(0px)`;
             logo.style.opacity = `1`;
-            logo.style.transition = 'all 1.5s ease';
+            logo.style.transition = 'all 1s ease';
 
             typedintro.style.transform = `translateY(0px)`;
             typedintro.style.opacity = `1`;
-            typedintro.style.transition = 'all 1.5s ease';
+            typedintro.style.transition = 'all 1s ease';
         }
 
         /** Overview section (starts at 30% and ends at 50%) */
         if (scrollPercentage >= 0.3) {
-            body.style.background = "#6294cf";  // Blue
-            body.style.transition = 'all 1.5s ease';
+            body.style.background = "#639e65";  // Blue
+            body.style.transition = 'all 1.0s ease';
 
             BGtitle.style.transform = `translateX(0px)`;
             BGtitle.style.opacity = `1`;
-            BGtitle.style.transition = 'all 1.5s ease';
+            BGtitle.style.transition = 'all 1s ease';
         } else {
-            body.style.background = "#639e65"; // Default green
-            body.style.transition = 'all 1.5s ease';
+            body.style.background = "#cdc1b7"; // Default green
+            body.style.transition = 'all 1s ease';
 
             BGtitle.style.transform = `translateX(-500px)`;
             BGtitle.style.opacity = `0`;
-            BGtitle.style.transition = 'all 1.5s ease';
+            BGtitle.style.transition = 'all 1s ease';
         }
 
     });

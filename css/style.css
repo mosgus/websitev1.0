@@ -10,7 +10,7 @@
 
 body{
     overflow-x: hidden;
-    background: #639e65; /* default green 639e65  */
+    background: #cdc1b7; /* default green 639e65  */
     min-height: 100vh;
 }
 
@@ -25,12 +25,13 @@ body{
 
 #header .logo{
     font-family: 'Press Start 2P', sans-serif;
-    color: lightgreen;
+    color: #fffaf1; /* old: lightgreen */
     font-size: 2.0em;
     text-decoration: none;
     position: fixed;
-    text-shadow: #1f512e -10px 6px;
+    text-shadow: #958171 -10px 6px; /* old: #1f512e */
 }
+
 
 section{
     position: relative;
@@ -57,13 +58,14 @@ section{
 #intro .message {
     font-size: 2.5em;
     font-family: 'Roboto Mono', sans-serif;
-    color: #dbffdb;
-    text-shadow: #659565 -10px 10px;
+    color: #fffaf1; /* old green #dbffdb */
+    text-shadow: #bca58e -10px 10px; /* old green #65956 */
 }
 
 #intro .typed-cursor {
     font-size: 4em;  /* Same size as the message to match */
-    color: #dbffdb;  /* Same color as the text */
+    color: #fffaf1;  /* old green #65956 */
+    text-shadow: #bca58e -10px 10px;
 }
 
 #intro .scroll-gif {
@@ -87,21 +89,21 @@ section{
 #overview .BGtitle {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2.0em;
-    color: #446291;
-    text-shadow: #618daf -8px 8px;
-
+    color: lightgreen;
+    text-shadow: #1f512e -8px 8px;
     opacity: 0;
 }
 
-#overview .BGtext {
+#overview .BGtp {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    font-family: 'Roboto Mono', sans-serif;
-    font-size: 1.0em;
-    color: #dbffdb;
+    max-width: 900px; /* Restrict the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 50px 20px; /* Add padding inside the container */
+    gap: 20px; /* space between the text and the image */
 
 }
 
@@ -114,9 +116,30 @@ section{
 }
 
 #overview .pfp {
-    width: 400px;  /* Width of the profile picture */
-    height: 400px;
-    border-radius: 50%;  /* Circular shape */
+    width: 350px;  /* Width of the profile picture */
+    height: 320px;
+    border-radius: 5%;  /* Circular shape */
     object-fit: cover;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    #overview .BGtp {
+        flex-direction: column; /* Stack text and image vertically */
+        justify-content: center; /* Center items */
+        align-items: center; /* Center items horizontally */
+        padding: 20px 10px; /* Reduce padding */
+        gap: 15px; /* Adjust spacing between elements */
+    }
+
+    #overview .BGdesc {
+        font-size: 1em; /* Reduce font size for readability */
+        text-align: center; /* Center-align text */
+    }
+
+    #overview .pfp {
+        width: 250px; /* Adjust the size of the profile picture */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
