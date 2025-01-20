@@ -125,17 +125,27 @@ section{
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
+
+    #overview .BGtitle {
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 1.8em;
+        color: lightgreen;
+        text-shadow: #1f512e -8px 8px;
+        opacity: 0;
+    }
+
+
     #overview .BGtp {
         flex-direction: column; /* Stack text and image vertically */
         justify-content: center; /* Center items */
         align-items: center; /* Center items horizontally */
-        padding: 20px 10px; /* Reduce padding */
+        padding: 20px 0px; /* Reduce padding */
         gap: 15px; /* Adjust spacing between elements */
     }
 
     #overview .BGdesc {
         font-size: 1em; /* Reduce font size for readability */
-        text-align: center; /* Center-align text */
+
     }
 
     #overview .pfp {
