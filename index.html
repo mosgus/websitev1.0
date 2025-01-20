@@ -10,8 +10,7 @@
 <body>
 
 <header id="header">
-    <a href="#" class="logo" id="logo">Gunnar Balch</a>
-
+    <a href="https://www.linkedin.com/in/gunnarbalch/" class="logo" id="logo">Gunnar Balch</a>
 </header>
 
 <!-- Intro Section -->
@@ -30,7 +29,8 @@
     <div class="BGtp">
         <img src="images/manuela.png" alt="Gunnar's profile picture" class="pfp">
         <div class="BGintro">
-            BGdesc
+            <h1 class="heroText">Hello, I'm<span class="name">Gunnar.</span></h1>
+            <h1 class="devText" id="typing-dev"></h1>
         </div>
     </div>
     <p>
@@ -57,8 +57,8 @@
         loop: true,  // Enable looping of the animation
     });
 
-    new Typed('#X', {
-        strings: ['📊','Overview','Background', 'Who Am I?'], typeSpeed: 100, backSpeed: 75, backDelay: 2000, startDelay: 1000, loop: true,
+    new Typed('#typing-dev', {
+        strings: ['Developer','Investor', '', 'SQL', 'Python', 'Javascript'], typeSpeed: 100, backSpeed: 75, backDelay: 2000, startDelay: 1000, loop: true,
     });
 </script>
 
@@ -118,8 +118,6 @@
 
     window.addEventListener('load', function () {
         const scrollGif = document.querySelector('.scroll-gif');
-        //const logo = document.querySelector('.logo');
-        const BGtitle = document.querySelector('.BGtitle');
 
         BGtitle.style.transform = `translateX(-500px)`;
 

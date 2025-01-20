@@ -30,6 +30,8 @@ body{
     text-decoration: none;
     position: fixed;
     text-shadow: #958171 -10px 6px; /* old: #1f512e */
+
+    white-space: nowrap;
 }
 
 
@@ -92,6 +94,8 @@ section{
     color: lightgreen;
     text-shadow: #1f512e -8px 8px;
     opacity: 0;
+
+    white-space: nowrap;
 }
 
 #overview .BGtp {
@@ -102,16 +106,8 @@ section{
 
     max-width: 900px; /* Restrict the width of the container */
     margin: 0 auto; /* Center the container horizontally */
-    padding: 50px 20px; /* Add padding inside the container */
+    padding: 50px; /* Add padding inside the container */
     gap: 20px; /* space between the text and the image */
-
-}
-
-#overview .BGintro {
-    flex: 1;  /* Take up available space on the left */
-    font-family: 'Roboto Mono', sans-serif;
-    font-size: 1.2em;
-    color: #dbffdb;
 
 }
 
@@ -123,10 +119,40 @@ section{
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#overview .BGintro { /* Hello im Gunnar - */
+    text-shadow: #558061 -6px 5px;
+}
+
+#overview .heroText {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2.6em;
+    color: #b4ffb4;
+}
+
+#overview .heroText .name {
+    color: #fffd3d; /* Change the color for "Gunnar Balch" */
+}
+
+#overview .devText {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 3em;
+    color: #fffd3d;
+    text-shadow: #416e4b -6px 5px;
+
+    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-flex; /* Align cursor with text */
+    align-items: center; /* Center the cursor vertically with text */
+}
+
+#overview .typed-cursor {
+    font-size: 5.5em;
+    color: #b4ffb4;
+}
+
+
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
-
     #overview {
         display: flex;
         flex-direction: column;
@@ -137,7 +163,7 @@ section{
 
     #overview .BGtitle {
         font-family: 'Press Start 2P', sans-serif;
-        font-size: 1.4em;
+        font-size: 1.5em;
         color: lightgreen;
         text-shadow: #1f512e -8px 8px;
         opacity: 0;
@@ -156,14 +182,18 @@ section{
     }
 
     #overview .BGintro {
+        flex-direction: column; /* Stack text and image vertically */
+        justify-content: center; /* Center items */
+        align-items: center; /* Center items horizontally */
+        margin: 0 auto;
     }
 
     #overview .pfp {
-        width: 60vw; /* Dynamically scale width to 25% of the viewport width */
+        width: 62vw; /* Dynamically scale width to 25% of the viewport width */
         max-width: 180px; /* Set a maximum size for smaller screens */
         height: auto; /* Maintain the aspect ratio */
         margin: 0 auto; /* Center the image horizontally */
-        border-radius: 12%; /* Rounded edges */
+        border-radius: 1%; /* Rounded edges */
         object-fit: cover; /* Ensures the image fits nicely */
     }
 }
