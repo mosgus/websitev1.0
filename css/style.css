@@ -113,12 +113,24 @@ section{
 
 }
 
-#overview .pfp {
-    width: 350px;  /* Width of the profile picture */
-    height: 320px;
-    border-radius: 5%;  /* Circular shape */
-    object-fit: cover;
-    box-shadow: -10px 15px 8px rgba(0, 0, 0, 0.2);
+#overview .slideshow-container {
+    width: 40vh; /* Container width */
+    height: 46vh; /* Container height */
+    position: relative;
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Ensure images stay inside the container */
+    border-radius: 5%; /* Optional rounded edges */
+    box-shadow: -10px 15px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    display: flex; /* Enable centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#overview .slideshow-img {
+    width: 39vh; /* Ensure the image scales to the container width */
+    height: 45.2vh; /* Ensure the image scales to the container height */
+    object-fit: fill; /* Maintain aspect ratio while filling the container */
+    border-radius: inherit; /* Match the container's border radius */
 }
 
 #overview .BGintro { /* Hello im Gunnar - */
@@ -165,10 +177,10 @@ section{
 
     #overview .BGtitle {
         font-family: 'Press Start 2P', sans-serif;
-        font-size: 1.5em;
+        font-size: 2em;
         color: lightgreen;
         text-shadow: #1f512e -8px 8px;
-        opacity: 0;
+        white-space: nowrap;
     }
 
 
@@ -190,12 +202,11 @@ section{
         margin: 0 auto;
     }
 
-    #overview .pfp {
-        width: 62vw; /* Dynamically scale width to 25% of the viewport width */
-        max-width: 180px; /* Set a maximum size for smaller screens */
-        height: auto; /* Maintain the aspect ratio */
-        margin: 0 auto; /* Center the image horizontally */
-        border-radius: 1%; /* Rounded edges */
-        object-fit: cover; /* Ensures the image fits nicely */
+    #overview .heroText {
+        font-size: 2.2em;
+    }
+
+    #overview .devText {
+        font-size: 2.5em;
     }
 }
