@@ -120,15 +120,15 @@ section{
     margin: 0 auto; /* Center the container horizontally */
     overflow: hidden; /* Ensure images stay inside the container */
     border-radius: 5%; /* Optional rounded edges */
-    box-shadow: -10px 15px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
     display: flex; /* Enable centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 }
 
 #overview .slideshow-img {
-    width: 39vh; /* Ensure the image scales to the container width */
-    height: 45.2vh; /* Ensure the image scales to the container height */
+    width: 39.5vh; /* Ensure the image scales to the container width */
+    height: 45.6vh; /* Ensure the image scales to the container height */
     object-fit: fill; /* Maintain aspect ratio while filling the container */
     border-radius: inherit; /* Match the container's border radius */
 }
@@ -167,6 +167,19 @@ section{
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
+
+    #header .logo{
+        font-size: 1.5em;
+    }
+
+    #intro .message {
+        font-size: 2em;
+    }
+
+    #intro .typed-cursor {
+        font-size: 3.5em; /* Same size as the message to match */
+    }
+
     #overview {
         display: flex;
         flex-direction: column;
