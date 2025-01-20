@@ -62,6 +62,8 @@ section{
     font-family: 'Roboto Mono', sans-serif;
     color: #fffaf1; /* old green #dbffdb */
     text-shadow: #bca58e -10px 10px; /* old green #65956 */
+
+    white-space: nowrap;
 }
 
 #intro .typed-cursor {
@@ -116,7 +118,7 @@ section{
     height: 320px;
     border-radius: 5%;  /* Circular shape */
     object-fit: cover;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: -10px 15px 8px rgba(0, 0, 0, 0.2);
 }
 
 #overview .BGintro { /* Hello im Gunnar - */
