@@ -27,10 +27,10 @@
 <section class="scene" id="overview">
     <h1 class="BGtitle" id="BGtitle">Who Am I?</h1>
     <div class="BGtp">
-        <div class="slideshow-container">
+        <div class="slideshow-container" id = "pfp">
             <img src="images/manuela.png" alt="Slideshow image" class="slideshow-img">
         </div>
-        <div class="BGintro">
+        <div class="BGintro" id="BGintro">
             <h1 class="heroText">Hello, I'm<span class="name">Gunnar.</span></h1>
             <h1 class="devText" id="typing-dev"></h1>
         </div>
@@ -68,6 +68,8 @@
     let logo = document.getElementById('logo');
     let typedintro = document.getElementById('intro');
     let BGtitle = document.getElementById('BGtitle');
+    let pfp = document.getElementById('pfp');
+    let BGintro = document.getElementById('BGintro');
 
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
@@ -77,40 +79,59 @@
         let scrollPercentage = scrollValue / totalHeight;
 
         /** Introduction section */
-        if (scrollPercentage > 0.2) {
+        if (scrollPercentage > 0.15) {
             logo.style.transform = `translateX(-400px)`;
             logo.style.opacity = `0`;
             logo.style.transition = 'all 1s ease';
 
-            typedintro.style.transform = `translateY(-300px)`;
-            typedintro.style.opacity = `0`;
-            typedintro.style.transition = 'all 1s ease';
-        } else {
-            //body.style.background = "#639e65"; // Default green
-            //body.style.transition = 'all 2.0s ease';
-
-            logo.style.transform = `translateX(0px)`;
-            logo.style.opacity = `1`;
-            logo.style.transition = 'all 1s ease';
-
-            typedintro.style.transform = `translateY(0px)`;
-            typedintro.style.opacity = `1`;
-            typedintro.style.transition = 'all 1s ease';
-        }
-
-        /** Overview section (starts at 30% and ends at 50%) */
-        if (scrollPercentage >= 0.3) {
-            body.style.background = "#639e65";  // Blue
-            body.style.transition = 'all 1.0s ease';
-
-            BGtitle.style.transform = `translateX(0px)`;
-            BGtitle.style.opacity = `1`;
-            BGtitle.style.transition = 'all 1s ease';
+            if ( scrollPercentage > 0.2) {
+                typedintro.style.transform = `translateY(-300px)`;
+                typedintro.style.opacity = `0`;
+                typedintro.style.transition = 'all 1s ease';
+            } else {
+                typedintro.style.transform = `translateY(0px)`;
+                typedintro.style.opacity = `1`;
+                typedintro.style.transition = 'all 1s ease';
+            }
         } else {
             body.style.background = "#cdc1b7"; // Default green
             body.style.transition = 'all 1s ease';
 
-            BGtitle.style.transform = `translateX(-500px)`;
+            logo.style.transform = `translateX(0px)`;
+            logo.style.opacity = `1`;
+            logo.style.transition = 'all 1s ease';
+        }
+
+        /** Overview section (starts at 30%) */
+        if (scrollPercentage >= 0.3) {
+            body.style.background = "#639e65";  // Blue
+            body.style.transition = 'all 1.0s ease';
+
+            BGtitle.style.transform = `translateY(0px)`;
+            BGtitle.style.opacity = `1`;
+            BGtitle.style.transition = 'all 2s ease';
+
+            if (scrollPercentage >= 0.5) {
+                pfp.style.transform = `translateX(0px)`;
+                pfp.style.opacity = `1`;
+                pfp.style.transition = 'all 2s ease';
+
+                BGintro.style.transform = `translateX(0px)`;
+                BGintro.style.opacity = `1`;
+                BGintro.style.transition = 'all 2.5s ease';
+
+            } else {
+                pfp.style.transform = `translateX(-300px)`;
+                pfp.style.opacity = `0`;
+                pfp.style.transition = 'all 1s ease';
+
+                BGintro.style.transform = `translateY(400px)`;
+                BGintro.style.opacity = `0`;
+                BGintro.style.transition = 'all 3s ease';
+            }
+
+        } else {
+            BGtitle.style.transform = `translateX(350px)`;
             BGtitle.style.opacity = `0`;
             BGtitle.style.transition = 'all 1s ease';
         }
@@ -135,21 +156,15 @@
         "images/manuela.png",
         "images/luce.png",
         "images/pfp.png"
-    ];
-    let currentIndex = 0;
+    ]; // Add your image paths here
+    let currentIndex = 0; // Start with the first image
     const slideshowImage = document.querySelector(".slideshow-img");
-
+    // Function to update the image
     function updateImage() {
-
-        // Wait for the fade-out transition to complete
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
-            // Fade current image
-            slideshowImage.src = images[currentIndex];
-
-        }, 1000); // Match the duration of the fade-out transition
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+        slideshowImage.src = images[currentIndex]; // Update the image source
     }
 
     // Change the image every 3 seconds
-    setInterval(updateImage, 5000); // 3000ms = 3 seconds
+    setInterval(updateImage, 8000); // 3000ms = 3 seconds
 </script>
