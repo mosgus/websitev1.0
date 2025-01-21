@@ -125,10 +125,9 @@ section{
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 }
-#overview .slideshow-container:hover {
-    transform: scale(1.05);
-    box-shadow: -10px 15px 20px rgba(0, 0, 0, 0.4);
 
+#overview .slideshow-container:hover {
+    box-shadow: -10px 15px 20px rgba(0, 0, 0, 0.5);
     transition: 1s ease;
 }
 
@@ -169,6 +168,12 @@ section{
     color: #b4ffb4;
 }
 
+#overview .desc {
+    padding-top: 25px;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1.5em;
+    color: #b4ffb4;
+}
 
 
 /* Media query for smaller screens (e.g., mobile devices) */
