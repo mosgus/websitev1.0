@@ -140,6 +140,7 @@ section{
 
 #overview .BGintro { /* Hello im Gunnar - */
     text-shadow: #558061 -6px 5px;
+    max-width: 500px;
 }
 
 #overview .heroText {
