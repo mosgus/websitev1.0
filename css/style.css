@@ -222,7 +222,7 @@ section{
 
 }
 
-#overview .custom-line {
+#overview .custom-lineA {
     border: 0; /* Remove default border */
     height: 2px; /* Set the height of the line */
     background: #b4ffb4; /* Set the line color */

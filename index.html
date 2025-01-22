@@ -38,8 +38,7 @@
         </div>
     </div>
 
-    <!-- Social Media Links -->
-    <div class="social-links">
+    <div class="social-links" id = "social-links">
         <a href="https://www.linkedin.com/in/gunnarbalch/" target="_blank" class="social-icon">
             <img src="images/linkedin.svg" alt="LinkedIn Profile">
         </a>
@@ -51,7 +50,7 @@
         </a>
     </div>
 
-    <hr class="custom-line">
+    <hr class="custom-lineA" id="custom-lineA">
 
 </section>
 
@@ -89,6 +88,7 @@
     let BGtitle = document.getElementById('BGtitle');
     let pfp = document.getElementById('pfp');
     let BGintro = document.getElementById('BGintro');
+    let socials = document.getElementById('social-links');
 
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
@@ -139,6 +139,12 @@
                 BGintro.style.opacity = `1`;
                 BGintro.style.transition = 'all 2.5s ease';
 
+                if (scrollPercentage >= 0.6) {
+                    socials.style.transform = `translateX(0px)`;
+                    socials.style.opacity = `1`;
+                    socials.style.transition = 'all 3s ease';
+                }
+
             }
         } else {
             BGtitle.style.transform = `translateX(350px)`;
@@ -152,6 +158,10 @@
             BGintro.style.transform = `translateY(400px)`;
             BGintro.style.opacity = `0`;
             BGintro.style.transition = 'all 3s ease';
+
+            socials.style.transform = `translateX(400px)`;
+            socials.style.opacity = `0`;
+            socials.style.transition = 'all 3s ease';
         }
 
     });
