@@ -106,7 +106,7 @@ section{
     justify-content: center;
     align-items: center;
 
-    max-width: 900px; /* Restrict the width of the container */
+    max-width: 1200px; /* Restrict the width of the container */
     margin: 0 auto; /* Center the container horizontally */
     padding: 50px; /* Add padding inside the container */
     gap: 20px; /* space between the text and the image */
@@ -114,10 +114,12 @@ section{
 }
 
 #overview .slideshow-container {
+
+    opacity: 0;
+
     width: 40vh;
     height: 46vh;
     position: relative;
-    margin: 0 auto;
     overflow: hidden;
     border-radius: 5%;
     box-shadow: -10px 10px 8px rgba(0, 0, 0, 0.2);
@@ -132,10 +134,20 @@ section{
 }
 
 #overview .slideshow-img {
-    width: 39.5vh; /* Ensure the image scales to the container width */
-    height: 45.6vh; /* Ensure the image scales to the container height */
+
+    scale: 1.0;
+    transition: all 1s ease;
+
+    position: absolute;
+    width: 39.8vh;
+    height: 45.8vh;
     object-fit: fill; /* Maintain aspect ratio while filling the container */
     border-radius: inherit; /* Match the container's border radius */
+}
+
+#overview .slideshow-img:hover {
+    scale: 1.02;
+    transition: all 1s ease;
 }
 
 #overview .BGintro { /* Hello im Gunnar - */
@@ -176,6 +188,49 @@ section{
     color: #b4ffb4;
 }
 
+#overview .social-links {
+    display: flex;
+    justify-content: center; /* Center align the icons */
+    align-items: center;
+    gap: 20px; /* Space between the icons */
+    margin: 20px 0; /* Add spacing around the container */
+}
+
+/* Social Icons */
+#overview .social-links .social-icon img {
+    width: 50px; /* Adjust size of the icons */
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+    filter: blur(100%); /* Default grayscale effect */
+}
+
+/* Hover Effect */
+#overview .social-links .social-icon img:hover {
+    transform: scale(1.1);
+
+}
+
+#overview .social-links .social-iconB img {
+    width: 56px;
+    height: 56px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: blur(100%);
+}
+
+#overview .social-links .social-iconB img:hover {
+    transform: scale(1.08);
+
+}
+
+#overview .custom-line {
+    border: 0; /* Remove default border */
+    height: 2px; /* Set the height of the line */
+    background: #b4ffb4; /* Set the line color */
+    margin: 10px 0; /* Add spacing above and below the line */
+    width: 80%; /* Set the line width */
+    margin-left: auto; /* Center align the line */
+    margin-right: auto;
+}
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {

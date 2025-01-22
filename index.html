@@ -37,14 +37,31 @@
                 and data analysis.</h2>
         </div>
     </div>
-    <p>
-        I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
-        I attended Georgia State University from 2019 - 2021 as a physics major, though I
-        changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
-        I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
-        I hope to nurture a career in Computational Finance.
-    </p>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/gunnarbalch/" target="_blank" class="social-icon">
+            <img src="images/linkedin.svg" alt="LinkedIn Profile">
+        </a>
+        <a href="https://github.com/mosgus" target="_blank" class="social-icon">
+            <img src="images/github.svg" alt="GitHub Profile">
+        </a>
+        <a href="https://www.instagram.com/gunnarcmb/" target="_blank" class="social-iconB">
+            <img src="images/IG.svg" alt="Instagram Profile">
+        </a>
+    </div>
+
+    <hr class="custom-line">
+
 </section>
+
+<p>
+    I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
+    I attended Georgia State University from 2019 - 2021 as a physics major, though I
+    changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
+    I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
+    I hope to nurture a career in Computational Finance.
+</p>
 
 </body>
 </html>
@@ -122,20 +139,19 @@
                 BGintro.style.opacity = `1`;
                 BGintro.style.transition = 'all 2.5s ease';
 
-            } else {
-                pfp.style.transform = `translateX(-300px)`;
-                pfp.style.opacity = `0`;
-                pfp.style.transition = 'all 1s ease';
-
-                BGintro.style.transform = `translateY(400px)`;
-                BGintro.style.opacity = `0`;
-                BGintro.style.transition = 'all 3s ease';
             }
-
         } else {
             BGtitle.style.transform = `translateX(350px)`;
             BGtitle.style.opacity = `0`;
             BGtitle.style.transition = 'all 1s ease';
+
+            pfp.style.transform = `translateX(-300px)`;
+            pfp.style.opacity = `0`;
+            pfp.style.transition = 'all 1s ease';
+
+            BGintro.style.transform = `translateY(400px)`;
+            BGintro.style.opacity = `0`;
+            BGintro.style.transition = 'all 3s ease';
         }
 
     });
