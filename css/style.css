@@ -10,7 +10,7 @@
 
 body{
     overflow-x: hidden;
-    background: #cdc1b7; /* default green 639e65  */
+    background: #cdc1b7; /* old green 639e65  */
     min-height: 100vh;
 }
 
@@ -22,7 +22,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
 #header .logo{
     font-family: 'Press Start 2P', sans-serif;
     color: #fffaf1; /* old: lightgreen */
@@ -34,7 +33,6 @@ body{
     white-space: nowrap;
 }
 
-
 section{
     position: relative;
     width: 100%;
@@ -44,19 +42,17 @@ section{
     align-items: center;
 }
 
+
+/* ⚪️ intro ⚪️ */
 #intro {
     display: flex;
     flex-direction: column;  /* Stack message and scroll GIF vertically */
-    justify-content: center;
-    align-items: center;
 }
-
 #intro .message-wrapper {
     display: inline-flex;  /* Ensure text and cursor stay inline */
     justify-content: center;
     align-items: center;
 }
-
 #intro .message {
     font-size: 2.5em;
     font-family: 'Roboto Mono', sans-serif;
@@ -65,41 +61,34 @@ section{
 
     white-space: nowrap;
 }
-
 #intro .typed-cursor {
     font-size: 4em;  /* Same size as the message to match */
     color: #fffaf1;  /* old green #65956 */
     text-shadow: #bca58e -10px 10px;
 }
-
 #intro .scroll-gif {
     margin-top: 20px;  /* Adds space between the message and GIF */
     opacity: 0;
 }
-
 #loading-gif {
     width: 60px;  /* Smaller size for the GIF */
     height: 60px;
 }
-
+/* 🔴️Intro 🔴️ */
+/* ⚪️ OVERVIEW ⚪️ */
 #overview {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 25px;
 }
-
 #overview .BGtitle {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2.0em;
     color: lightgreen;
     text-shadow: #1f512e -8px 8px;
     opacity: 0;
-
     white-space: nowrap;
 }
-
 #overview .BGtp {
     display: flex;
     flex-direction: row;
@@ -112,11 +101,8 @@ section{
     gap: 20px; /* space between the text and the image */
 
 }
-
 #overview .slideshow-container {
-
     opacity: 0;
-
     width: 40vh;
     height: 46vh;
     position: relative;
@@ -127,12 +113,10 @@ section{
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 }
-
 #overview .slideshow-container:hover {
     box-shadow: -10px 15px 20px rgba(0, 0, 0, 0.5);
     transition: 1s ease;
 }
-
 #overview .slideshow-img {
 
     scale: 1.0;
@@ -144,50 +128,41 @@ section{
     object-fit: fill; /* Maintain aspect ratio while filling the container */
     border-radius: inherit; /* Match the container's border radius */
 }
-
 #overview .slideshow-img:hover {
     scale: 1.02;
     transition: all 1s ease;
 }
-
 #overview .BGintro { /* Hello im Gunnar - */
-    text-shadow: #558061 -6px 5px;
     max-width: 500px;
+    text-shadow: #558061 -6px 5px 5px;
 }
-
 #overview .heroText {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 2.6em;
     color: #b4ffb4;
 }
-
 #overview .heroText .name {
     color: #fffd3d; /* Change the color for "Gunnar Balch" */
 }
-
 #overview .devText {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 3em;
     color: #fffd3d;
-    text-shadow: #416e4b -6px 5px;
 
     white-space: nowrap; /* Prevent text wrapping */
     display: inline-flex; /* Align cursor with text */
     align-items: center; /* Center the cursor vertically with text */
 }
-
 #overview .typed-cursor {
     font-size: 5.5em;
     color: #b4ffb4;
 }
-
 #overview .desc {
     padding-top: 25px;
     font-family: 'Roboto Light', sans-serif;
     font-size: 1.5em;
     color: #b4ffb4;
 }
-
 #overview .social-links {
     display: flex;
     justify-content: center; /* Center align the icons */
@@ -195,33 +170,25 @@ section{
     gap: 20px; /* Space between the icons */
     margin: 20px 0; /* Add spacing around the container */
 }
-
-/* Social Icons */
 #overview .social-links .social-icon img {
     width: 50px; /* Adjust size of the icons */
     height: 50px;
     transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
     filter: blur(100%); /* Default grayscale effect */
 }
-
-/* Hover Effect */
 #overview .social-links .social-icon img:hover {
     transform: scale(1.1);
 
 }
-
 #overview .social-links .social-iconB img {
     width: 56px;
     height: 56px;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: blur(100%);
 }
-
 #overview .social-links .social-iconB img:hover {
     transform: scale(1.08);
-
 }
-
 #overview .custom-lineA {
     border: 0; /* Remove default border */
     height: 2px; /* Set the height of the line */
@@ -231,6 +198,31 @@ section{
     margin-left: auto; /* Center align the line */
     margin-right: auto;
 }
+/* 🔴️Overview 🔴️ */
+/* ⚪️ Synopsis ⚪️ */
+#synopsis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px; /* affects  width */
+}
+#synopsis .Stitle {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    color: #d3a2ff;
+    text-shadow: #3f1f51 -8px 8px;
+    opacity: 0.5;
+    align-self: flex-start;
+
+}
+#synopsis .synopsis-p {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1.1em;
+    color: #b19ac8;
+    text-shadow: #3f1f51 -4px 4px 5px;
+}
+/* 🔴️Synopsis 🔴️ */
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {

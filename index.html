@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gunnar's Webpage</title>
+    <title>Gunnar Balch</title>
     <link rel="icon" type="image/png" href="images/favicon.png" >
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- Name/Header -->
 <header id="header">
     <a href="#" class="logo" id="logo">Gunnar Balch</a>
 </header>
@@ -37,7 +38,6 @@
                 and data analysis.</h2>
         </div>
     </div>
-
     <div class="social-links" id = "social-links">
         <a href="https://www.linkedin.com/in/gunnarbalch/" target="_blank" class="social-icon">
             <img src="images/linkedin.svg" alt="LinkedIn Profile">
@@ -49,25 +49,34 @@
             <img src="images/IG.svg" alt="Instagram Profile">
         </a>
     </div>
-
     <hr class="custom-lineA" id="custom-lineA">
 
 </section>
 
-<p>
-    I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
-    I attended Georgia State University from 2019 - 2021 as a physics major, though I
-    changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
-    I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
-    I hope to nurture a career in Computational Finance.
-</p>
+<!-- Synopsis Section -->
+<section class="scene" id="synopsis">
+    <h1 class="Stitle" id="Stitle">Synopsis</h1>
+    <div class="synopsis-p">
+        I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
+        I attended Georgia State University from 2019 - 2021 as a physics major, though I
+        changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
+        I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
+        I hope to nurture a career in Computational Finance.
+    </div>
+</section>
+
+<section class="scene" id="projects">
+    <h1 class="Ptitle" id="Ptitle">Projects</h1>
+</section>
+
+
 
 </body>
 </html>
 
 <!-- Load library from the CDN -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script>
+<script> <!-- Typing Script -->
     new Typed('#typing-title', {
         strings: ['⚪️','Hello World.', 'Welcome to my webpage!', 'This is my portfolio.', 'Demo my projects.', 'See my dog 🐕.', 'I like sushi.'], // Texts to type
         typeSpeed: 100, // Speed of typing
@@ -81,7 +90,7 @@
     });
 </script>
 
-<script>
+<script> <!-- Scrolling Script -->
     let body = document.body;
     let logo = document.getElementById('logo');
     let typedintro = document.getElementById('intro');
@@ -89,7 +98,9 @@
     let pfp = document.getElementById('pfp');
     let BGintro = document.getElementById('BGintro');
     let socials = document.getElementById('social-links');
+    let linea = document.getElementById('custom-lineA');
 
+    /** SCROLL */
     window.addEventListener('scroll', function () {
         let scrollValue = window.scrollY;
         let viewportHeight = window.innerHeight;
@@ -98,31 +109,30 @@
         let scrollPercentage = scrollValue / totalHeight;
 
         /** Introduction section */
-        if (scrollPercentage > 0.15) {
+        if (scrollPercentage > 0.10) {
             logo.style.transform = `translateX(-400px)`;
             logo.style.opacity = `0`;
             logo.style.transition = 'all 1s ease';
 
-            if ( scrollPercentage > 0.2) {
-                typedintro.style.transform = `translateY(-300px)`;
-                typedintro.style.opacity = `0`;
-                typedintro.style.transition = 'all 1s ease';
-            } else {
-                typedintro.style.transform = `translateY(0px)`;
-                typedintro.style.opacity = `1`;
-                typedintro.style.transition = 'all 1s ease';
-            }
+            typedintro.style.transform = `translateY(-300px)`;
+            typedintro.style.opacity = `0`;
+            typedintro.style.transition = 'all 1s ease';
+
         } else {
-            body.style.background = "#cdc1b7"; // Default green
+            body.style.background = "#cdc1b7"; // Default off-white
             body.style.transition = 'all 1s ease';
 
             logo.style.transform = `translateX(0px)`;
             logo.style.opacity = `1`;
             logo.style.transition = 'all 1s ease';
+
+            typedintro.style.transform = `translateY(0px)`;
+            typedintro.style.opacity = `1`;
+            typedintro.style.transition = 'all 1s ease';
         }
 
-        /** Overview section (starts at 30%) */
-        if (scrollPercentage >= 0.3) {
+        /** Overview section (starts at 20%) */
+        if (scrollPercentage >= 0.2 && scrollPercentage < 0.55) {
             body.style.background = "#639e65";  // Blue
             body.style.transition = 'all 1.0s ease';
 
@@ -130,7 +140,7 @@
             BGtitle.style.opacity = `1`;
             BGtitle.style.transition = 'all 2s ease';
 
-            if (scrollPercentage >= 0.5) {
+            if (scrollPercentage >= 0.25) {
                 pfp.style.transform = `translateX(0px)`;
                 pfp.style.opacity = `1`;
                 pfp.style.transition = 'all 2s ease';
@@ -139,13 +149,18 @@
                 BGintro.style.opacity = `1`;
                 BGintro.style.transition = 'all 2.5s ease';
 
-                if (scrollPercentage >= 0.6) {
+                if (scrollPercentage >= 0.28) {
                     socials.style.transform = `translateX(0px)`;
                     socials.style.opacity = `1`;
                     socials.style.transition = 'all 3s ease';
+
+                    linea.style.transform = `scaleX(1)`;
+                    linea.style.opacity = `1`;
+                    linea.style.transition = 'all 2s ease';
                 }
 
             }
+
         } else {
             BGtitle.style.transform = `translateX(350px)`;
             BGtitle.style.opacity = `0`;
@@ -155,17 +170,28 @@
             pfp.style.opacity = `0`;
             pfp.style.transition = 'all 1s ease';
 
-            BGintro.style.transform = `translateY(400px)`;
+            BGintro.style.transform = `translateX(400px)`;
             BGintro.style.opacity = `0`;
             BGintro.style.transition = 'all 3s ease';
 
             socials.style.transform = `translateX(400px)`;
             socials.style.opacity = `0`;
             socials.style.transition = 'all 3s ease';
+
+            linea.style.transform = `scaleX(0.1)`;
+            linea.style.opacity = `0`;
+            linea.style.transition = 'all 2s ease';
+        }
+
+        /** Synopsis section */
+        if (scrollPercentage >= 0.65 && scrollPercentage < 0.8) {
+            body.style.background = "#83639e";  // Blue
+            body.style.transition = 'all 1.5s ease';
         }
 
     });
 
+    /** LOAD */
     window.addEventListener('load', function () {
         const scrollGif = document.querySelector('.scroll-gif');
 
@@ -175,11 +201,11 @@
 
         setTimeout(() => {
             scrollGif.style.opacity = '1';  // Make it visible
-        }, 12000);
+        }, 10000);
     });
 </script>
 
-<script>
+<script> <!-- Slideshow Script -->
     const images = [
         "images/manuela.png",
         "images/luce.png",
@@ -187,12 +213,12 @@
     ]; // Add your image paths here
     let currentIndex = 0; // Start with the first image
     const slideshowImage = document.querySelector(".slideshow-img");
-    // Function to update the image
+
     function updateImage() {
         currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
         slideshowImage.src = images[currentIndex]; // Update the image source
     }
 
-    // Change the image every 3 seconds
-    setInterval(updateImage, 8000); // 3000ms = 3 seconds
+    // change image
+    setInterval(updateImage, 8000); // ms
 </script>
