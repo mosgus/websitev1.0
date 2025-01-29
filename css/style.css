@@ -207,9 +207,9 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px; /* affects  width */
+    padding: 200px; /* affects  width */
 
-    height: 150vh; /* Biggest section to contain the big info */
+    height: 180vh; /* Biggest section to contain the big info */
 }
 #synopsis .Stitle {
     font-family: 'Press Start 2P', sans-serif;
@@ -222,7 +222,7 @@ section{
 }
 #synopsis .synopsis-p {
     font-family: 'Roboto Mono', sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #b19ac8;
     text-shadow: #3f1f51 -4px 4px 5px;
 

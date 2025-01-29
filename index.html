@@ -58,18 +58,30 @@
     <h1 class="Stitle" id="Stitle">Synopsis</h1>
     <div class="synopsis-p" id="synopsis-p">
         <p>
-        I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
-        I attended Georgia State University from 2019 - 2021 as a physics major, though I
-        changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
-        I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
-        I hope to nurture a career in Computational Finance.
+            My name is Gunnar Clyde Mckie Balch.
+            I'm a 23-year-old computer scientist, investor, and aspiring innovator who's passionate about leveraging technology in the world of finance.
         </p>
         <p>
-        I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
-        I attended Georgia State University from 2019 - 2021 as a physics major, though I
-        changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
-        I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
-        I hope to nurture a career in Computational Finance.
+            I grew up in Atlanta, Georgia.
+            As a child, I spent much of my time playing and loving sports( football, basketball, and fishing ), which taught me teamwork, perseverance, and the importance of goal-setting.
+            Alongside my love for sports, I've always had a keen interest in technology and mechanics, often taking apart my toys and gadgets to figure out the inner workings and/or to rebuild them in my own way.
+        </p>
+        <p>
+            It was this curiosity that sparked my passion for coding.
+            I began building and programming Lego Mindstorm robots and later explored game and server development through creating Minecraft mods and hosting/managing multiplayer servers.
+            My fascination with coding and technology has only grown since, and it's became clear that I should pursue a career where I could merge these skills with real-world applications.
+        </p>
+        <p>
+            From 2019 to 2021, I studied Physics at Georgia State University.
+            In the spring of 2020, I landed my first job as a cashier and line-cook at Bennett's Market & Deli.
+            However, my time there was short-lived due to COVID-19 lockdowns.
+            During that period, I rediscovered my passion for coding and technology, which ultimately led me to switch majors to Computer Science and transfer to the University of Georgia in the summer of 2021.
+            It was at UGA that I developed a deep interest in finance, sparked by a Computational Science course and my work on financial analysis software.
+            In the fall of 2024, I earned my Bachelor of Science in Computer Science with a 3.53 GPA. GO DAWGS!
+        </p>
+        <p>
+            Currently, I’m seeking opportunities to expand my knowledge and experience, applying for work while preparing for graduate school.
+            My ultimate goal is to build a fulfilling career in Computational Finance, where I can bridge my technical skills with my passion for innovation, analysis, and problem-solving.
         </p>
     </div>
     <hr class="custom-lineB" id="custom-lineB">
@@ -145,7 +157,7 @@
         }
 
         /** Overview section (starts at 20%) */
-        if (scrollPercentage >= 0.2 && scrollPercentage < 0.5) {
+        if (scrollPercentage >= 0.2 && scrollPercentage < 0.48) {
             body.style.background = "#639e65";  // Blue
             body.style.transition = 'all 1.0s ease';
 
@@ -197,15 +209,15 @@
         }
 
         /** Synopsis section */
-        if (scrollPercentage >= 0.55 && scrollPercentage < 0.85) {
+        if (scrollPercentage >= 0.52 && scrollPercentage < 0.88) {
             body.style.background = "#83639e";  // Blue
-            body.style.transition = 'all 1.5s ease';
+            body.style.transition = 'all 1.2s ease';
 
             Syn_title.style.transform = `translateX(0px)`;
             Syn_title.style.opacity = `1`;
-            Syn_title.style.transition = 'all 2s ease';
+            Syn_title.style.transition = 'all 1s ease';
 
-            if ( scrollPercentage >= 0.6 ) {
+            if ( scrollPercentage >= 0.54 ) {
                 Syn_paragraph.style.transform = `translateX(0px)`;
                 Syn_paragraph.style.opacity = `1`;
                 Syn_paragraph.style.transition = 'all 2s ease';
@@ -218,13 +230,13 @@
             }
 
         } else {
-            Syn_title.style.transform = `translateX(-200px)`;
+            Syn_title.style.transform = `translateX(-300px)`;
             Syn_title.style.opacity = `0`;
-            Syn_title.style.transition = 'all 1.5s ease';
+            Syn_title.style.transition = 'all 1s ease';
 
             Syn_paragraph.style.transform = `translateX(300px)`;
             Syn_paragraph.style.opacity = `0`;
-            Syn_paragraph.style.transition = 'all 1.5s ease';
+            Syn_paragraph.style.transition = 'all 1s ease';
 
             lineb.style.transform = `scaleX(0)`;
             lineb.style.opacity = `0`;
@@ -232,7 +244,7 @@
         }
 
         /** Project Section */
-        if (scrollPercentage >= 0.86 && scrollPercentage < 0.99) {
+        if (scrollPercentage >= 0.9 && scrollPercentage < 0.99) {
             body.style.background = "#fffb95";
             body.style.transition = 'all 1.5s ease';
         }
