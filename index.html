@@ -201,12 +201,12 @@
             body.style.background = "#83639e";  // Blue
             body.style.transition = 'all 1.5s ease';
 
-            Syn_title.style.transform = `translateY(0px)`;
+            Syn_title.style.transform = `translateX(0px)`;
             Syn_title.style.opacity = `1`;
             Syn_title.style.transition = 'all 2s ease';
 
             if ( scrollPercentage >= 0.6 ) {
-                Syn_paragraph.style.transform = `translateY(0px)`;
+                Syn_paragraph.style.transform = `translateX(0px)`;
                 Syn_paragraph.style.opacity = `1`;
                 Syn_paragraph.style.transition = 'all 2s ease';
             }
@@ -218,7 +218,7 @@
             }
 
         } else {
-            Syn_title.style.transform = `translateY(-200px)`;
+            Syn_title.style.transform = `translateX(-200px)`;
             Syn_title.style.opacity = `0`;
             Syn_title.style.transition = 'all 1.5s ease';
 
@@ -232,8 +232,8 @@
         }
 
         /** Project Section */
-        if (scrollPercentage >= 0.85 && scrollPercentage < 0.99) {
-            body.style.background = "#95a3ff";
+        if (scrollPercentage >= 0.86 && scrollPercentage < 0.99) {
+            body.style.background = "#fffb95";
             body.style.transition = 'all 1.5s ease';
         }
 
