@@ -56,13 +56,23 @@
 <!-- Synopsis Section -->
 <section class="scene" id="synopsis">
     <h1 class="Stitle" id="Stitle">Synopsis</h1>
-    <div class="synopsis-p">
+    <div class="synopsis-p" id="synopsis-p">
+        <p>
         I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
         I attended Georgia State University from 2019 - 2021 as a physics major, though I
         changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
         I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
         I hope to nurture a career in Computational Finance.
+        </p>
+        <p>
+        I grew up in Atlanta, Georgia. As a kid I found a passion for coding through building and coding Lego Mindstorm robots as well as developing Minecraft mods.
+        I attended Georgia State University from 2019 - 2021 as a physics major, though I
+        changed majors to Computer Science and transferred to the University of Georgia in the summer of '21.
+        I graduated UGA with a BS in Computer Science and a 3.53 GPA. Currently, I am looking for work and applying to graduate schools.
+        I hope to nurture a career in Computational Finance.
+        </p>
     </div>
+    <hr class="custom-lineB" id="custom-lineB">
 </section>
 
 <section class="scene" id="projects">
@@ -93,12 +103,15 @@
 <script> <!-- Scrolling Script -->
     let body = document.body;
     let logo = document.getElementById('logo');
-    let typedintro = document.getElementById('intro');
+    let firstintro = document.getElementById('intro'); // end of intro section
     let BGtitle = document.getElementById('BGtitle');
     let pfp = document.getElementById('pfp');
     let BGintro = document.getElementById('BGintro');
     let socials = document.getElementById('social-links');
-    let linea = document.getElementById('custom-lineA');
+    let linea = document.getElementById('custom-lineA'); // end of overview section
+    let Syn_title = document.getElementById('Stitle');
+    let Syn_paragraph = document.getElementById('synopsis-p');
+    let lineb = document.getElementById('custom-lineB');
 
     /** SCROLL */
     window.addEventListener('scroll', function () {
@@ -114,9 +127,9 @@
             logo.style.opacity = `0`;
             logo.style.transition = 'all 1s ease';
 
-            typedintro.style.transform = `translateY(-300px)`;
-            typedintro.style.opacity = `0`;
-            typedintro.style.transition = 'all 1s ease';
+            firstintro.style.transform = `translateY(-300px)`;
+            firstintro.style.opacity = `0`;
+            firstintro.style.transition = 'all 1s ease';
 
         } else {
             body.style.background = "#cdc1b7"; // Default off-white
@@ -126,13 +139,13 @@
             logo.style.opacity = `1`;
             logo.style.transition = 'all 1s ease';
 
-            typedintro.style.transform = `translateY(0px)`;
-            typedintro.style.opacity = `1`;
-            typedintro.style.transition = 'all 1s ease';
+            firstintro.style.transform = `translateY(0px)`;
+            firstintro.style.opacity = `1`;
+            firstintro.style.transition = 'all 1s ease';
         }
 
         /** Overview section (starts at 20%) */
-        if (scrollPercentage >= 0.2 && scrollPercentage < 0.55) {
+        if (scrollPercentage >= 0.2 && scrollPercentage < 0.5) {
             body.style.background = "#639e65";  // Blue
             body.style.transition = 'all 1.0s ease';
 
@@ -140,7 +153,7 @@
             BGtitle.style.opacity = `1`;
             BGtitle.style.transition = 'all 2s ease';
 
-            if (scrollPercentage >= 0.25) {
+            if (scrollPercentage >= 0.22) {
                 pfp.style.transform = `translateX(0px)`;
                 pfp.style.opacity = `1`;
                 pfp.style.transition = 'all 2s ease';
@@ -170,9 +183,9 @@
             pfp.style.opacity = `0`;
             pfp.style.transition = 'all 1s ease';
 
-            BGintro.style.transform = `translateX(400px)`;
+            BGintro.style.transform = `translateX(500px)`;
             BGintro.style.opacity = `0`;
-            BGintro.style.transition = 'all 3s ease';
+            BGintro.style.transition = 'all 2s ease';
 
             socials.style.transform = `translateX(400px)`;
             socials.style.opacity = `0`;
@@ -184,8 +197,43 @@
         }
 
         /** Synopsis section */
-        if (scrollPercentage >= 0.65 && scrollPercentage < 0.8) {
+        if (scrollPercentage >= 0.55 && scrollPercentage < 0.85) {
             body.style.background = "#83639e";  // Blue
+            body.style.transition = 'all 1.5s ease';
+
+            Syn_title.style.transform = `translateY(0px)`;
+            Syn_title.style.opacity = `1`;
+            Syn_title.style.transition = 'all 2s ease';
+
+            if ( scrollPercentage >= 0.6 ) {
+                Syn_paragraph.style.transform = `translateY(0px)`;
+                Syn_paragraph.style.opacity = `1`;
+                Syn_paragraph.style.transition = 'all 2s ease';
+            }
+
+            if ( scrollPercentage >= 0.65 ) {
+                lineb.style.transform = `scaleX(1)`;
+                lineb.style.opacity = `1`;
+                lineb.style.transition = 'all 2s ease';
+            }
+
+        } else {
+            Syn_title.style.transform = `translateY(-200px)`;
+            Syn_title.style.opacity = `0`;
+            Syn_title.style.transition = 'all 1.5s ease';
+
+            Syn_paragraph.style.transform = `translateX(300px)`;
+            Syn_paragraph.style.opacity = `0`;
+            Syn_paragraph.style.transition = 'all 1.5s ease';
+
+            lineb.style.transform = `scaleX(0)`;
+            lineb.style.opacity = `0`;
+            lineb.style.transition = 'all 1.5s ease';
+        }
+
+        /** Project Section */
+        if (scrollPercentage >= 0.85 && scrollPercentage < 0.99) {
+            body.style.background = "#95a3ff";
             body.style.transition = 'all 1.5s ease';
         }
 

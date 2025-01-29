@@ -162,6 +162,8 @@ section{
     font-family: 'Roboto Light', sans-serif;
     font-size: 1.5em;
     color: #b4ffb4;
+
+    line-height: 1.25;
 }
 #overview .social-links {
     display: flex;
@@ -190,12 +192,12 @@ section{
     transform: scale(1.08);
 }
 #overview .custom-lineA {
-    border: 0; /* Remove default border */
-    height: 2px; /* Set the height of the line */
-    background: #b4ffb4; /* Set the line color */
-    margin: 10px 0; /* Add spacing above and below the line */
-    width: 80%; /* Set the line width */
-    margin-left: auto; /* Center align the line */
+    border: 0;
+    height: 2px;
+    background: #b4ffb4;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: auto;
     margin-right: auto;
 }
 /* 🔴️Overview 🔴️ */
@@ -206,6 +208,8 @@ section{
     justify-content: center;
     align-items: center;
     padding: 100px; /* affects  width */
+
+    height: 150vh; /* Biggest section to contain the big info */
 }
 #synopsis .Stitle {
     font-family: 'Press Start 2P', sans-serif;
@@ -218,9 +222,27 @@ section{
 }
 #synopsis .synopsis-p {
     font-family: 'Roboto Mono', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #b19ac8;
     text-shadow: #3f1f51 -4px 4px 5px;
+
+    margin: 25px 10px;
+    text-align: justify;
+    line-height: 2;
+
+    display: flex;
+    flex-direction: column; /* Stacks children (p tags) vertically */
+    gap: 10px;
+}
+
+#synopsis .custom-lineB {
+    border: 0; /* Remove default border */
+    height: 2px; /* Set the height of the line */
+    background: #ae8ac8; /* Set the line color */
+    margin: 10px 0; /* Add spacing above and below the line */
+    width: 100%; /* Set the line width */
+    margin-left: auto; /* Center align the line */
+    margin-right: auto;
 }
 /* 🔴️Synopsis 🔴️ */
 
