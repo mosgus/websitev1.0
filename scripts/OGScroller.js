@@ -1,33 +1,24 @@
-console.log("✅ Loaded Small Scroller");
+let body = document.body;
+let logo = document.getElementById('logo');
+let firstintro = document.getElementById('intro'); // end of intro section
+let BGtitle = document.getElementById('BGtitle');
+let pfp = document.getElementById('pfp');
+let BGintro = document.getElementById('BGintro');
+let socials = document.getElementById('social-links');
+let linea = document.getElementById('custom-lineA'); // end of overview section
+let Syn_title = document.getElementById('Stitle');
+let Syn_paragraph = document.getElementById('synopsis-p');
+let lineb = document.getElementById('custom-lineB');
 
-// Define `handleScroll` as a global function **before** `DOMContentLoaded`
-window.handleScroll = function () {
+/** SCROLL */
+window.addEventListener('scroll', function () {
     let scrollValue = window.scrollY;
     let viewportHeight = window.innerHeight;
     let totalHeight = document.body.scrollHeight - viewportHeight;
-    let scrollPercentage = scrollValue / totalHeight;
-
-    console.log(`📜 Scroll detected! Percentage: ${scrollPercentage}`);
-
-    let body = document.body;
-    let logo = document.getElementById('logo');
-    let firstintro = document.getElementById('intro'); // end of intro section
-    let BGtitle = document.getElementById('BGtitle');
-    let pfp = document.getElementById('pfp');
-    let BGintro = document.getElementById('BGintro');
-    let socials = document.getElementById('social-links');
-    let linea = document.getElementById('custom-lineA'); // end of overview section
-    let Syn_title = document.getElementById('Stitle');
-    let Syn_paragraph = document.getElementById('synopsis-p');
-    let lineb = document.getElementById('custom-lineB');
-
-    if (!logo || !firstintro) {
-        console.error("❌ One or more elements not found! Check your IDs.");
-        return;
-    }
+    let scrollPercentage = scrollValue / totalHeight; // Normalize scroll value to a percentage (0 to 1)
 
     /** Introduction section */
-    if (scrollPercentage > 0.4 ) {
+    if (scrollPercentage > 0.04 ) {
         logo.style.transform = `translateX(-400px)`;
         logo.style.opacity = `0`;
         logo.style.transition = 'all 0.5s ease';
@@ -139,7 +130,6 @@ window.handleScroll = function () {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
     }
-};
 
-// Attach event listener immediately after script loads
-window.addEventListener("scroll", window.handleScroll);
+});
+

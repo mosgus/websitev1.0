@@ -1,22 +1,30 @@
-let body = document.body;
-let logo = document.getElementById('logo');
-let firstintro = document.getElementById('intro'); // end of intro section
-let BGtitle = document.getElementById('BGtitle');
-let pfp = document.getElementById('pfp');
-let BGintro = document.getElementById('BGintro');
-let socials = document.getElementById('social-links');
-let linea = document.getElementById('custom-lineA'); // end of overview section
-let Syn_title = document.getElementById('Stitle');
-let Syn_paragraph = document.getElementById('synopsis-p');
-let lineb = document.getElementById('custom-lineB');
+console.log("✅ Loaded Regular Scroller");
 
-/** SCROLL */
-window.addEventListener('scroll', function () {
+// Define `handleScroll` as a global function **before** `DOMContentLoaded`
+window.handleScroll = function () {
     let scrollValue = window.scrollY;
     let viewportHeight = window.innerHeight;
     let totalHeight = document.body.scrollHeight - viewportHeight;
-    // Normalize scroll value to a percentage (0 to 1)
     let scrollPercentage = scrollValue / totalHeight;
+
+    console.log(`📜 Scroll detected! Percentage: ${scrollPercentage}`);
+
+    let body = document.body;
+    let logo = document.getElementById('logo');
+    let firstintro = document.getElementById('intro'); // end of intro section
+    let BGtitle = document.getElementById('BGtitle');
+    let pfp = document.getElementById('pfp');
+    let BGintro = document.getElementById('BGintro');
+    let socials = document.getElementById('social-links');
+    let linea = document.getElementById('custom-lineA'); // end of overview section
+    let Syn_title = document.getElementById('Stitle');
+    let Syn_paragraph = document.getElementById('synopsis-p');
+    let lineb = document.getElementById('custom-lineB');
+
+    if (!logo || !firstintro) {
+        console.error("❌ One or more elements not found! Check your IDs.");
+        return;
+    }
 
     /** Introduction section */
     if (scrollPercentage > 0.04 ) {
@@ -131,6 +139,7 @@ window.addEventListener('scroll', function () {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
     }
+};
 
-});
-
+// Attach event listener immediately after script loads
+window.addEventListener("scroll", window.handleScroll);
