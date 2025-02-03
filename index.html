@@ -89,12 +89,10 @@
 </section>
 
 <section class="scene" id="mystuff">
-
     <h1 class="shittitle" id="shittitle">My Stuff</h1>
-
     <!-- DOWNLOAD RESUME BUTTON. Used elements from: https://freefrontend.com/css-download-buttons/ -->
     <div class="button-container">
-        <a href="files/Gunnar-Balch-Resume.pdf" download class="c-btn">
+        <a href="RESUME.pdf" download class="c-btn">
             <span class="c-btn__label">
                 DOWNLOAD RESUME
                 <svg width="18" height="18" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,164 +104,12 @@
 
 </section>
 
-
-
 </body>
 </html>
 
-<!-- Load library from the CDN -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script> <!-- Typing Script -->
-    new Typed('#typing-title', {
-        strings: ['⚪️','Hello World.', 'Welcome to my webpage!', 'This is my portfolio.', 'Demo my projects.', 'See my dog 🐕.', 'I like sushi.'], // Texts to type
-        typeSpeed: 100, // Speed of typing
-        backSpeed: 50,  // Speed when deleting
-        backDelay: 2000, // Pause before backspacing
-        startDelay: 1000, // Initial delay before typing starts
-        loop: true,  // Enable looping of the animation
-    });
-    new Typed('#typing-dev', {
-        strings: ['Developer.', 'Investor.', 'Pilot.', 'SQL', 'Python', 'Javascript', 'HTML' ], typeSpeed: 100, backSpeed: 75, backDelay: 2000, startDelay: 1000, loop: true,
-    });
-</script>
-
-<script> <!-- Scrolling Script -->
-    let body = document.body;
-    let logo = document.getElementById('logo');
-    let firstintro = document.getElementById('intro'); // end of intro section
-    let BGtitle = document.getElementById('BGtitle');
-    let pfp = document.getElementById('pfp');
-    let BGintro = document.getElementById('BGintro');
-    let socials = document.getElementById('social-links');
-    let linea = document.getElementById('custom-lineA'); // end of overview section
-    let Syn_title = document.getElementById('Stitle');
-    let Syn_paragraph = document.getElementById('synopsis-p');
-    let lineb = document.getElementById('custom-lineB');
-
-    /** SCROLL */
-    window.addEventListener('scroll', function () {
-        let scrollValue = window.scrollY;
-        let viewportHeight = window.innerHeight;
-        let totalHeight = document.body.scrollHeight - viewportHeight;
-        // Normalize scroll value to a percentage (0 to 1)
-        let scrollPercentage = scrollValue / totalHeight;
-
-        /** Introduction section */
-        if (scrollPercentage > 0.04 ) {
-            logo.style.transform = `translateX(-400px)`;
-            logo.style.opacity = `0`;
-            logo.style.transition = 'all 0.5s ease';
-            if (scrollPercentage > 0.08 ) {
-                firstintro.style.transform = `translateY(-300px)`;
-                firstintro.style.opacity = `0`;
-                firstintro.style.transition = 'all 1s ease';
-            }
-
-        } else {
-            body.style.background = "#cdc1b7"; // Default off-white
-            body.style.transition = 'all 1s ease';
-
-            logo.style.transform = `translateX(0px)`;
-            logo.style.opacity = `1`;
-            logo.style.transition = 'all 1s ease';
-
-            firstintro.style.transform = `translateY(0px)`;
-            firstintro.style.opacity = `1`;
-            firstintro.style.transition = 'all 1s ease';
-        }
-        /** Overview section (starts at 20%) */
-        if (scrollPercentage >= 0.15 && scrollPercentage < 0.45) {
-            body.style.background = "#639e65";  // Blue
-            body.style.transition = 'all 1.0s ease';
-
-            BGtitle.style.transform = `translateY(0px)`;
-            BGtitle.style.opacity = `1`;
-            BGtitle.style.transition = 'all 1.5s ease';
-
-            if (scrollPercentage >= 0.2) {
-                pfp.style.transform = `translateX(0px)`;
-                pfp.style.opacity = `1`;
-                pfp.style.transition = 'all 1.5s ease';
-
-                BGintro.style.transform = `translateX(0px)`;
-                BGintro.style.opacity = `1`;
-                BGintro.style.transition = 'all 2s ease';
-
-                if (scrollPercentage >= 0.22) {
-                    socials.style.transform = `translateX(0px)`;
-                    socials.style.opacity = `1`;
-                    socials.style.transition = 'all 2s ease';
-
-                    linea.style.transform = `scaleX(1)`;
-                    linea.style.opacity = `1`;
-                    linea.style.transition = 'all 1.5s ease';
-                }
-
-            }
-
-        } else {
-            BGtitle.style.transform = `translateX(350px)`;
-            BGtitle.style.opacity = `0`;
-            BGtitle.style.transition = 'all 1s ease';
-
-            pfp.style.transform = `translateX(-300px)`;
-            pfp.style.opacity = `0`;
-            pfp.style.transition = 'all 1s ease';
-
-            BGintro.style.transform = `translateX(500px)`;
-            BGintro.style.opacity = `0`;
-            BGintro.style.transition = 'all 2s ease';
-
-            socials.style.transform = `translateX(-400px)`;
-            socials.style.opacity = `0`;
-            socials.style.transition = 'all 3s ease';
-
-            linea.style.transform = `scaleX(0.1)`;
-            linea.style.opacity = `0`;
-            linea.style.transition = 'all 2s ease';
-        }
-        /** Synopsis section */
-        if (scrollPercentage >= 0.5 && scrollPercentage < 0.85) {
-            body.style.background = "#83639e";  // Blue
-            body.style.transition = 'all 1.2s ease';
-
-            Syn_title.style.transform = `translateX(0px)`;
-            Syn_title.style.opacity = `1`;
-            Syn_title.style.transition = 'all 1s ease';
-
-            if ( scrollPercentage >= 0.54 ) {
-                Syn_paragraph.style.transform = `translateX(0px)`;
-                Syn_paragraph.style.opacity = `1`;
-                Syn_paragraph.style.transition = 'all 2s ease';
-            }
-
-            if ( scrollPercentage >= 0.65 ) {
-                lineb.style.transform = `scaleX(1)`;
-                lineb.style.opacity = `1`;
-                lineb.style.transition = 'all 2s ease';
-            }
-
-        } else {
-            Syn_title.style.transform = `translateX(-300px)`;
-            Syn_title.style.opacity = `0`;
-            Syn_title.style.transition = 'all 0.75s ease';
-
-            Syn_paragraph.style.transform = `translateX(300px)`;
-            Syn_paragraph.style.opacity = `0`;
-            Syn_paragraph.style.transition = 'all 0.75s ease';
-
-            lineb.style.transform = `scaleX(0)`;
-            lineb.style.opacity = `0`;
-            lineb.style.transition = 'all 1.5s ease';
-        }
-        /** Project Section */
-        if (scrollPercentage >= 0.9 && scrollPercentage < 0.99) {
-            body.style.background = "#ffba95";
-            body.style.transition = 'all 1.5s ease';
-        }
-
-    });
-
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!-- library from CDN( Creates Typed Object ) -->
+<script src="scripts/typingAnime.js"> </script> <!-- Typing Script -->
+<script>
     /** LOAD */
     window.addEventListener('load', function () {
         const scrollGif = document.querySelector('.scroll-gif');
@@ -272,27 +118,26 @@
 
         scrollGif.style.transition = 'opacity 10s ease';
 
-        setTimeout(() => {
-            scrollGif.style.opacity = '1';  // Make it visible
-        }, 10000);
+        setTimeout(() => { scrollGif.style.opacity = '1'; }, 6000); // fades in after Xms
     });
-</script>
-
-
-<script>
+    /** SLIDESHOW */
     const images = [
         "images/manuela.png",
         "images/luce.png",
         "images/pfp.png"
-    ]; // Add your image paths here
-    let currentIndex = 0; // Start with the first image
+    ]; // image paths
+    let currentIndex = 0;
     const slideshowImage = document.querySelector(".slideshow-img");
-
     function updateImage() {
-        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
-        slideshowImage.src = images[currentIndex]; // Update the image source
-    }
-
-    // change image
+        currentIndex = (currentIndex + 1) % images.length; // creates loop
+        slideshowImage.src = images[currentIndex];
+    } // change image
     setInterval(updateImage, 8000); // ms
-</script> <!-- Slideshow Script -->
+</script> <!-- Slideshow & Gif Load Script -->
+
+<!-- NEED TO RESTRUCTURE FOR DIFFERENT SCREENS-->
+<script src="scripts/regScroller.js"></script> <!-- Scrolling Animation and Loading for page elements Script -->
+<!-- figure out how to call scripts/smallScroller.js -->
+
+
+
