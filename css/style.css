@@ -7,13 +7,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     overflow-x: hidden;
     background: #cdc1b7; /* old green 639e65  */
     min-height: 100vh;
 }
-
 #header{
     position: absolute;
     top: 0;
@@ -43,7 +41,6 @@ section{
     align-items: center;
 }
 
-
 /* ⚪️ intro ⚪️ */
 #intro {
     display: flex;
@@ -65,7 +62,8 @@ section{
 #intro .typed-cursor {
     font-size: 4em;  /* Same size as the message to match */
     color: #fffaf1;  /* old green #65956 */
-    text-shadow: #bca58e -10px 10px;
+    text-shadow: #bca58e -8px 8px;
+    margin-left: -2px;
 }
 #intro .scroll-gif {
     margin-top: 20px;  /* Adds space between the message and GIF */
@@ -81,6 +79,7 @@ section{
     display: flex;
     flex-direction: column;
     padding: 25px;
+    min-height: 120vh;
 }
 #overview .BGtitle {
     font-family: 'Press Start 2P', sans-serif;
@@ -101,7 +100,7 @@ section{
     padding: 50px; /* Add padding inside the container */
     gap: 20px; /* space between the text and the image */
 
-}
+} /* contains slideshow and intro */
 #overview .slideshow-container {
     opacity: 0;
     width: 40vh;
@@ -151,21 +150,23 @@ section{
     font-size: 3em;
     color: #fffd3d;
 
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     display: inline-flex; /* Align cursor with text */
     align-items: center; /* Center the cursor vertically with text */
+    margin-bottom: 0;
 }
 #overview .typed-cursor {
-    font-size: 5.5em;
+    font-size: 1em;
     color: #b4ffb4;
+    margin-left: -10px;
 }
 #overview .desc {
     padding-top: 25px;
     font-family: 'Roboto Light', sans-serif;
     font-size: 1.5em;
     color: #b4ffb4;
-
-    line-height: 1.25;
+    line-height: 1.2;
+    margin-top: 0;
 }
 #overview .social-links {
     display: flex;
@@ -197,10 +198,10 @@ section{
     border: 0;
     height: 2px;
     background: #b4ffb4;
-    margin: 10px 0;
+    margin: 20px auto;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    position: relative; /* Ensure it's positioned properly */
 }
 /* 🔴️Overview 🔴️ */
 /* ⚪️ Synopsis ⚪️ */
@@ -254,11 +255,9 @@ section{
     align-items: center;
     padding: 200px;
 }
-
 #mystuff h1 {
     font-family: 'Press Start 2P', sans-serif;
 }
-
 /* 🔴️mystuff 🔴️ */
 
 /* Media query for smaller screens (e.g., mobile devices) */
@@ -274,58 +273,105 @@ section{
         text-shadow: #958171 -4px 4px 5px;
         left: 24.5%;  /* Start at 50% */
     }
-
+    /* ⚪️ intro ⚪️ */
     #intro {
         height: 100vh;
     }
     #intro .message {
         font-size: 1.2em;
     }
-
     #intro .typed-cursor {
         font-size: 3em; /* Same size as the message to match */
     }
-
+    /* 🔴️Intro 🔴️ */
+    /* ⚪️ OVERVIEW ⚪️ */
     #overview {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 25px;
+        min-height: 100vh;
     }
-
     #overview .BGtitle {
         font-family: 'Press Start 2P', sans-serif;
-        font-size: 2em;
+        font-size: 1.6em;
         color: lightgreen;
         text-shadow: #1f512e -8px 8px;
         white-space: nowrap;
     }
-
-
-    #overview .BGtp {
+    #overview .BGtp { /* contains slideshow and intro */
         flex-direction: column; /* Stack text and image vertically */
-        justify-content: center; /* Center items */
-        align-items: center; /* Center items horizontally */
-        padding: 20px; /* Reduce padding */
-        gap: 15px; /* Adjust spacing between elements */
-
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
         margin: 0 auto;
-
     }
-
+    #overview .slideshow-container {
+        width: 25vh;  /* Reduce size */
+        height: 30vh;
+        box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.15);
+    }
+    #overview .slideshow-img {
+        width: 24.6vh;  /* Adjust to match container */
+        height: 29.6vh;
+        object-fit: cover;  /* Keeps aspect ratio while filling */
+    }
     #overview .BGintro {
-        flex-direction: column; /* Stack text and image vertically */
-        justify-content: center; /* Center items */
-        align-items: center; /* Center items horizontally */
-        margin: 0 auto;
-    }
+        max-width: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+        margin-bottom: 0;
+    }
     #overview .heroText {
-        font-size: 2.2em;
+        font-size: 1.5em;
     }
-
     #overview .devText {
-        font-size: 2.5em;
+        font-size: 1.5em;
+        display: inline-flex;
+        align-items: center; /* Keeps them aligned */
+        justify-content: center;
+        white-space: nowrap; /* Prevent wrapping */
     }
+    #overview .devText span {
+        display: inline;
+        vertical-align: middle; /* Ensures proper alignment */
+    }
+    #overview .typed-cursor {
+        font-size: 1.32em;
+        line-height: 1;
+        display: inline; /* Prevents block behavior */
+        vertical-align: middle; /* Keeps it aligned */
+        margin-left: -10px;
+    }
+    #overview .desc {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    #overview .social-links {
+        margin-bottom: 0;
+        margin-top: 0;
+        gap: 10px;
+    }
+    #overview .social-links .social-icon img {
+        width: 40px; /* Adjust size of the icons */
+        height: 40px;
+    }
+    #overview .social-links .social-iconB img {
+        width: 46px;
+        height: 46px;
+    }
+    #overview .custom-lineA {
+        width: 90%;
+        height: 2px;
+        display: block;
+        position: relative; /* Make sure it's properly positioned */
+    }
+    /* 🔴️Overview 🔴️ */
 }
