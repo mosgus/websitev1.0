@@ -113,12 +113,15 @@
     /** LOAD */
     window.addEventListener('load', function () {
         const scrollGif = document.querySelector('.scroll-gif');
+        let Syn_title = document.getElementById('Stitle');
+        let Syn_paragraph = document.getElementById('synopsis-p');
 
         BGtitle.style.transform = `translateX(-500px)`;
-
         scrollGif.style.transition = 'opacity 10s ease';
-
         setTimeout(() => { scrollGif.style.opacity = '1'; }, 6000); // fades in after Xms
+
+        Syn_title.style.opacity = `0`;
+        Syn_paragraph.style.opacity = `0`; // gets squeezed to top of page on mobile
     });
     /** SLIDESHOW */
     const images = [
@@ -134,9 +137,6 @@
     } // change image
     setInterval(updateImage, 8000); // ms
 </script> <!-- Slideshow & Gif Load Script -->
-
-<!-- NEED TO RESTRUCTURE FOR DIFFERENT SCREENS
-<script src="scripts/OGScroller.js"></script> -->
 
 <script>
     let currentScroller = null; // Track which script is active
@@ -171,10 +171,8 @@
         document.body.appendChild(newScript);
         currentScroller = scriptToLoad; // Update current script reference
     }
-
     // Load script on page load
     loadScrollingScript();
-
     // Detect screen resize and switch script dynamically
     window.addEventListener("resize", loadScrollingScript);
 </script>

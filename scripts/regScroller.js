@@ -50,7 +50,7 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section (starts at 20%) */
-    if (scrollPercentage >= 0.15 && scrollPercentage < 0.45) {
+    if (scrollPercentage >= 0.15 && scrollPercentage < 0.38) {
         body.style.background = "#639e65";  // Blue
         body.style.transition = 'all 1.0s ease';
 
@@ -70,7 +70,7 @@ window.handleScroll = function () {
             if (scrollPercentage >= 0.22) {
                 socials.style.transform = `translateX(0px)`;
                 socials.style.opacity = `1`;
-                socials.style.transition = 'all 2s ease';
+                socials.style.transition = 'all 1.5s ease';
 
                 linea.style.transform = `scaleX(1)`;
                 linea.style.opacity = `1`;
@@ -92,27 +92,27 @@ window.handleScroll = function () {
         BGintro.style.opacity = `0`;
         BGintro.style.transition = 'all 2s ease';
 
-        socials.style.transform = `translateX(-400px)`;
+        socials.style.transform = `translateX(-500px)`;
         socials.style.opacity = `0`;
-        socials.style.transition = 'all 3s ease';
+        socials.style.transition = 'all 1s ease';
 
         linea.style.transform = `scaleX(0.1)`;
         linea.style.opacity = `0`;
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.5 && scrollPercentage < 0.85) {
+    if (scrollPercentage >= 0.46 && scrollPercentage < 0.82) {
         body.style.background = "#83639e";  // Blue
-        body.style.transition = 'all 1.2s ease';
+        body.style.transition = 'all 1s ease';
 
         Syn_title.style.transform = `translateX(0px)`;
         Syn_title.style.opacity = `1`;
         Syn_title.style.transition = 'all 1s ease';
 
-        if ( scrollPercentage >= 0.54 ) {
+        if ( scrollPercentage >= 0.52 && scrollPercentage < 0.8) {
             Syn_paragraph.style.transform = `translateX(0px)`;
             Syn_paragraph.style.opacity = `1`;
-            Syn_paragraph.style.transition = 'all 2s ease';
+            Syn_paragraph.style.transition = 'all 1.5s ease';
         }
 
         if ( scrollPercentage >= 0.65 ) {
@@ -128,7 +128,7 @@ window.handleScroll = function () {
 
         Syn_paragraph.style.transform = `translateX(300px)`;
         Syn_paragraph.style.opacity = `0`;
-        Syn_paragraph.style.transition = 'all 0.75s ease';
+        Syn_paragraph.style.transition = 'all 1s ease';
 
         lineb.style.transform = `scaleX(0)`;
         lineb.style.opacity = `0`;

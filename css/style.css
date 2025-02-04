@@ -25,10 +25,11 @@ body{
 #header .logo{
     font-family: 'Press Start 2P', sans-serif;
     color: #fffaf1; /* old: lightgreen */
+    text-shadow: #958171 -10px 6px; /* old: #1f512e */
     font-size: 2.0em;
     text-decoration: none;
     position: fixed;
-    text-shadow: #958171 -10px 6px; /* old: #1f512e */
+
 
     white-space: nowrap;
 }
@@ -210,7 +211,7 @@ section{
     align-items: center;
     padding: 200px; /* affects  width */
 
-    height: 200vh; /* Biggest section to contain the big info */
+    height: 250vh; /* Biggest section to contain the big info */
 }
 #synopsis .Stitle {
     font-family: 'Press Start 2P', sans-serif;
@@ -263,9 +264,15 @@ section{
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 768px) {
 
+    #header {
+        padding: 25px;
+        justify-content: center;  /* Center content horizontally */
+        align-items: center;
+    }
     #header .logo{
-        position: fixed;
-        font-size: 1.2em;
+        font-size: 1.5em;
+        text-shadow: #958171 -4px 4px 5px;
+        left: 24.5%;  /* Start at 50% */
     }
 
     #intro {

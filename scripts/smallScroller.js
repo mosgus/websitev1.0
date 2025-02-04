@@ -27,11 +27,11 @@ window.handleScroll = function () {
     }
 
     /** Introduction section */
-    if (scrollPercentage > 0.4 ) {
+    if (scrollPercentage > 0.03 ) {
         logo.style.transform = `translateX(-400px)`;
         logo.style.opacity = `0`;
         logo.style.transition = 'all 0.5s ease';
-        if (scrollPercentage > 0.08 ) {
+        if (scrollPercentage > 0.06 ) {
             firstintro.style.transform = `translateY(-300px)`;
             firstintro.style.opacity = `0`;
             firstintro.style.transition = 'all 1s ease';
@@ -50,8 +50,8 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section (starts at 20%) */
-    if (scrollPercentage >= 0.15 && scrollPercentage < 0.45) {
-        body.style.background = "#639e65";  // Blue
+    if (scrollPercentage >= 0.09 && scrollPercentage < 0.45) {
+        body.style.background = "#639e65";  // #639e65 green
         body.style.transition = 'all 1.0s ease';
 
         BGtitle.style.transform = `translateY(0px)`;
