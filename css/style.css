@@ -383,16 +383,16 @@ section{
     /* 🔴️Overview 🔴️ */
     /* ⚪️ Synopsis ⚪️ */
     #synopsis {
-        padding: 100px 20px;
+        padding: 100px 2px;
         height: auto;
     }
     #synopsis .Stitle {
-        font-size: 1.4em;  /* Reduce title size */
-        text-align: center; /* Center the title */
+        font-size: 1.4em;
+        text-align: center;
         align-self: center;
     }
     #synopsis .synopsis-p {
         font-size: 0.8em;
-        margin: 1px 20px;
+        text-align: unset; /* Keep justified alignment */
     }
 }
