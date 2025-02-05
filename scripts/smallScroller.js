@@ -49,7 +49,7 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section (starts at 20%) */
-    if (scrollPercentage >= 0.09 && scrollPercentage < 0.28) {
+    if (scrollPercentage >= 0.09 && scrollPercentage < 0.32) {
         body.style.background = "#639e65";  // #639e65 green
         body.style.transition = 'all 1.0s ease';
 
@@ -100,7 +100,7 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.3 && scrollPercentage < 0.95) {
+    if (scrollPercentage >= 0.36 && scrollPercentage < 0.95) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1.2s ease';
 
