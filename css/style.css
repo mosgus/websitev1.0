@@ -257,6 +257,11 @@ section{
 }
 #mystuff h1 {
     font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    color: #805d4a;
+    text-shadow: #cc9071 -6px 6px 5px;
+    white-space: nowrap;
+
 }
 /* 🔴️mystuff 🔴️ */
 

@@ -50,7 +50,7 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section (starts at 20%) */
-    if (scrollPercentage >= 0.15 && scrollPercentage < 0.38) {
+    if (scrollPercentage >= 0.15 && scrollPercentage < 0.4) {
         body.style.background = "#639e65";  // Blue
         body.style.transition = 'all 1.0s ease';
 
@@ -101,11 +101,11 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.45 && scrollPercentage < 0.85) {
+    if (scrollPercentage >= 0.46 && scrollPercentage < 0.85) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1s ease';
 
-        if (scrollPercentage >= 0.48 ) {
+        if (scrollPercentage >= 0.5 ) {
             Syn_title.style.transform = `translateX(0px)`;
             Syn_title.style.opacity = `1`;
             Syn_title.style.transition = 'all 1s ease';
