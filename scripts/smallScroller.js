@@ -49,7 +49,7 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section (starts at 20%) */
-    if (scrollPercentage >= 0.09 && scrollPercentage < 0.3) {
+    if (scrollPercentage >= 0.09 && scrollPercentage < 0.22) {
         body.style.background = "#639e65";  // #639e65 green
         body.style.transition = 'all 1.0s ease';
 
@@ -57,7 +57,7 @@ window.handleScroll = function () {
         BGtitle.style.opacity = `1`;
         BGtitle.style.transition = 'all 1.5s ease';
 
-        if (scrollPercentage >= 0.12) {
+        if (scrollPercentage >= 0.10) {
             pfp.style.transform = `translateX(0px)`;
             pfp.style.opacity = `1`;
             pfp.style.transition = 'all 1.5s ease';
@@ -66,7 +66,7 @@ window.handleScroll = function () {
             BGintro.style.opacity = `1`;
             BGintro.style.transition = 'all 2s ease';
 
-            if (scrollPercentage >= 0.15) {
+            if (scrollPercentage >= 0.11) {
                 socials.style.transform = `translateX(0px)`;
                 socials.style.opacity = `1`;
                 socials.style.transition = 'all 2s ease';
@@ -100,7 +100,7 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.35 && scrollPercentage < 0.85) {
+    if (scrollPercentage >= 0.24 && scrollPercentage < 0.85) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1.2s ease';
 

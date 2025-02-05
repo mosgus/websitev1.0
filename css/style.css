@@ -261,17 +261,22 @@ section{
 /* 🔴️mystuff 🔴️ */
 
 /* Media query for smaller screens (e.g., mobile devices) */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 
     #header {
-        padding: 25px;
-        justify-content: center;  /* Center content horizontally */
+        display: flex;
+        justify-content: center;
         align-items: center;
+        text-align: center;
+
+        padding: 20px 0;
+        position: fixed; /* Keeps it in place */
+        top: 0;
+        left: 0;
     }
     #header .logo{
         font-size: 1.5em;
         text-shadow: #958171 -4px 4px 5px;
-        left: 24.5%;  /* Start at 50% */
     }
     /* ⚪️ intro ⚪️ */
     #intro {
@@ -291,7 +296,7 @@ section{
         justify-content: center;
         align-items: center;
         padding: 25px;
-        min-height: 100vh;
+        min-height: 110vh;
     }
     #overview .BGtitle {
         font-family: 'Press Start 2P', sans-serif;
@@ -329,10 +334,11 @@ section{
         margin-bottom: 0;
     }
     #overview .heroText {
-        font-size: 1.5em;
+        font-size: 1.4em;
+        white-space: nowrap;
     }
     #overview .devText {
-        font-size: 1.5em;
+        font-size: 1.4em;
         display: inline-flex;
         align-items: center; /* Keeps them aligned */
         justify-content: center;
@@ -368,10 +374,19 @@ section{
         height: 46px;
     }
     #overview .custom-lineA {
-        width: 90%;
+        width: 80%;
         height: 2px;
         display: block;
+        margin: 15px auto;
         position: relative; /* Make sure it's properly positioned */
     }
     /* 🔴️Overview 🔴️ */
+    /* ⚪️ Synopsis ⚪️ */
+    #synopsis {
+        padding: 100px 20px;
+        height: auto;
+    }
+    #synopsis .Stitle {
+
+    }
 }
