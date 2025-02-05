@@ -387,6 +387,12 @@ section{
         height: auto;
     }
     #synopsis .Stitle {
-
+        font-size: 1.4em;  /* Reduce title size */
+        text-align: center; /* Center the title */
+        align-self: center;
+    }
+    #synopsis .synopsis-p {
+        font-size: 0.8em;
+        margin: 1px 20px;
     }
 }

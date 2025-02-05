@@ -101,11 +101,11 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.44 && scrollPercentage < 0.82) {
+    if (scrollPercentage >= 0.45 && scrollPercentage < 0.85) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1s ease';
 
-        if (scrollPercentage >= 0.46 ) {
+        if (scrollPercentage >= 0.48 ) {
             Syn_title.style.transform = `translateX(0px)`;
             Syn_title.style.opacity = `1`;
             Syn_title.style.transition = 'all 1s ease';
@@ -137,7 +137,7 @@ window.handleScroll = function () {
         lineb.style.transition = 'all 1.5s ease';
     }
     /** Project Section */
-    if (scrollPercentage >= 0.9 && scrollPercentage < 0.99) {
+    if (scrollPercentage >= 0.88 && scrollPercentage < 0.99) {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
     }

@@ -49,7 +49,7 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section (starts at 20%) */
-    if (scrollPercentage >= 0.09 && scrollPercentage < 0.22) {
+    if (scrollPercentage >= 0.09 && scrollPercentage < 0.28) {
         body.style.background = "#639e65";  // #639e65 green
         body.style.transition = 'all 1.0s ease';
 
@@ -100,21 +100,22 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.24 && scrollPercentage < 0.85) {
+    if (scrollPercentage >= 0.3 && scrollPercentage < 0.95) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1.2s ease';
 
-        Syn_title.style.transform = `translateX(0px)`;
-        Syn_title.style.opacity = `1`;
-        Syn_title.style.transition = 'all 1s ease';
-
-        if ( scrollPercentage >= 0.54 ) {
+        if (scrollPercentage >= 0.24) {
+            Syn_title.style.transform = `translateX(0px)`;
+            Syn_title.style.opacity = `1`;
+            Syn_title.style.transition = 'all 1s ease';
+        }
+        if ( scrollPercentage >= 0.25 ) {
             Syn_paragraph.style.transform = `translateX(0px)`;
             Syn_paragraph.style.opacity = `1`;
             Syn_paragraph.style.transition = 'all 2s ease';
         }
 
-        if ( scrollPercentage >= 0.65 ) {
+        if ( scrollPercentage >= 0.82 ) {
             lineb.style.transform = `scaleX(1)`;
             lineb.style.opacity = `1`;
             lineb.style.transition = 'all 2s ease';
@@ -134,7 +135,7 @@ window.handleScroll = function () {
         lineb.style.transition = 'all 1.5s ease';
     }
     /** Project Section */
-    if (scrollPercentage >= 0.9 && scrollPercentage < 0.99) {
+    if (scrollPercentage >= 0.96 && scrollPercentage < 0.99) {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
     }
