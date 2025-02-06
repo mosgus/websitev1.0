@@ -251,7 +251,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 200px;
+    height: 110vh
 }
 #mystuff h1 {
     font-family: 'Press Start 2P', sans-serif;
@@ -260,6 +260,13 @@ section{
     text-shadow: #cc9071 -6px 6px 5px;
     white-space: nowrap;
     margin-bottom: 25px;
+}
+
+#mystuff .button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 /* 🔴️mystuff 🔴️ */
 
@@ -398,4 +405,14 @@ section{
         font-size: 0.8em;
         text-align: unset; /* Keep justified alignment */
     }
+    /* 🔴️Synopsis 🔴️ */
+    /* ⚪️ mystuff ⚪️ */
+    #mystuff .button-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px; /* Space between buttons */
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+    /* 🔴️mystuff 🔴️ */
 }

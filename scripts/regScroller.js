@@ -20,6 +20,9 @@ window.handleScroll = function () {
     let Syn_title = document.getElementById('Stitle');
     let Syn_paragraph = document.getElementById('synopsis-p');
     let lineb = document.getElementById('custom-lineB');
+    let shitTitle = document.getElementById('shittitle')
+    let resButton = document.getElementById('resButton');
+    let projButton = document.getElementById('projButton');
 
     if (!logo || !firstintro) {
         console.error("❌ One or more elements not found! Check your IDs.");
@@ -136,11 +139,32 @@ window.handleScroll = function () {
         lineb.style.opacity = `0`;
         lineb.style.transition = 'all 1.5s ease';
     }
-    /** Project Section */
-    if (scrollPercentage >= 0.88 && scrollPercentage < 0.99) {
+    /** StuffSection */
+    if (scrollPercentage >= 0.88 ) {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
+
+        shitTitle.style.transform = `translateX(0px)`;
+        shitTitle.style.opacity = `1`;
+        shitTitle.style.transition = 'all 1s ease';
+        resButton.style.transform = `translateX(0px)`;
+        resButton.style.opacity = `1`;
+        resButton.style.transition = 'all 1s ease';
+        projButton.style.transform = `translateX(0px)`;
+        projButton.style.opacity = `1`;
+        projButton.style.transition = 'all 1s ease';
+    } else {
+        shitTitle.style.transform = `translateX(400px)`;
+        shitTitle.style.opacity = `0`;
+        shitTitle.style.transition = 'all 1s ease';
+        resButton.style.transform = `translateX(-400px)`;
+        resButton.style.opacity = `0`;
+        resButton.style.transition = 'all 1s ease';
+        projButton.style.transform = `translateY(400px)`;
+        projButton.style.opacity = `0`;
+        projButton.style.transition = 'all 1s ease';
     }
+
 };
 
 // Attach event listener immediately after script loads
