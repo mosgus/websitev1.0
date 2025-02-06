@@ -56,7 +56,6 @@ section{
     font-family: 'Roboto Mono', sans-serif;
     color: #fffaf1; /* old green #dbffdb */
     text-shadow: #bca58e -10px 10px; /* old green #65956 */
-
     white-space: nowrap;
 }
 #intro .typed-cursor {
@@ -211,7 +210,6 @@ section{
     justify-content: center;
     align-items: center;
     padding: 200px; /* affects  width */
-
     height: 250vh; /* Biggest section to contain the big info */
 }
 #synopsis .Stitle {
@@ -257,11 +255,11 @@ section{
 }
 #mystuff h1 {
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.75em;
     color: #805d4a;
     text-shadow: #cc9071 -6px 6px 5px;
     white-space: nowrap;
-
+    margin-bottom: 25px;
 }
 /* 🔴️mystuff 🔴️ */
 

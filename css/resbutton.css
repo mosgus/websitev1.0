@@ -32,6 +32,10 @@ img {
 }
 
 #mystuff .c-btn {
+
+    width: 200px; /* Set a fixed width */
+    height: 60px;
+
     position: relative;
     overflow: hidden;
     padding: 0.1rem 1rem;
