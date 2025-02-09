@@ -118,7 +118,7 @@ window.handleScroll = function () {
             Syn_paragraph.style.transition = 'all 2s ease';
         }
 
-        if ( scrollPercentage >= 0.82 ) {
+        if ( scrollPercentage >= 0.75 ) {
             lineb.style.transform = `scaleX(1)`;
             lineb.style.opacity = `1`;
             lineb.style.transition = 'all 2s ease';
