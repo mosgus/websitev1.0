@@ -52,7 +52,7 @@ window.handleScroll = function () {
         firstintro.style.opacity = `1`;
         firstintro.style.transition = 'all 1s ease';
     }
-    /** Overview section (starts at 20%) */
+    /** Overview section */
     if (scrollPercentage >= 0.15 && scrollPercentage < 0.4) {
         body.style.background = "#639e65";  // Blue
         body.style.transition = 'all 1.0s ease';

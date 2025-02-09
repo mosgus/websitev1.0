@@ -261,13 +261,13 @@ section{
     white-space: nowrap;
     margin-bottom: 25px;
 }
-
 #mystuff .button-wrapper {
     display: flex;
     justify-content: center;
     gap: 20px; /* Space between buttons */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
+} /* 🔅Adjust button properties in resbutton.css */
+
 /* 🔴️mystuff 🔴️ */
 
 /* Media query for smaller screens (e.g., mobile devices) */
@@ -411,7 +411,7 @@ section{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        gap: 20px; /* Space between buttons */
+        gap: 10px; /* Space between buttons */
         flex-wrap: wrap; /* Allows wrapping on smaller screens */
     }
     /* 🔴️mystuff 🔴️ */
