@@ -103,10 +103,9 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.36 && scrollPercentage < 0.95) {
+    if (scrollPercentage >= 0.36 && scrollPercentage < 0.92) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1.2s ease';
-
         if (scrollPercentage >= 0.24) {
             Syn_title.style.transform = `translateX(0px)`;
             Syn_title.style.opacity = `1`;
@@ -117,7 +116,6 @@ window.handleScroll = function () {
             Syn_paragraph.style.opacity = `1`;
             Syn_paragraph.style.transition = 'all 2s ease';
         }
-
         if ( scrollPercentage >= 0.65 ) {
             lineb.style.transform = `scaleX(1)`;
             lineb.style.opacity = `1`;
@@ -137,8 +135,8 @@ window.handleScroll = function () {
         lineb.style.opacity = `0`;
         lineb.style.transition = 'all 1.5s ease';
     }
-    /** StuffSection */
-    if (scrollPercentage >= 0.96 && scrollPercentage ) {
+    /** StuffSection & Footer */
+    if (scrollPercentage >= 0.96 ) {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
         shitTitle.style.transform = `translateX(0px)`;
@@ -162,6 +160,7 @@ window.handleScroll = function () {
         projButton.style.opacity = `0`;
         projButton.style.transition = 'all 1s ease';
     }
+
 };
 
 // Attach event listener immediately after script loads

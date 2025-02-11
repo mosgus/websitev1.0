@@ -267,8 +267,56 @@ section{
     gap: 20px; /* Space between buttons */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 } /* 🔅Adjust button properties in resbutton.css */
+/* 🔴️ mystuff 🔴️ */
+/* ⚪️ footer ⚪️ */
+#footer {
+    /*background-color: #805d4a; /* Background color */
+    color: #805d4a; /* Text color */
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
 
-/* 🔴️mystuff 🔴️ */
+.footer-content p {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Space between icons */
+}
+
+.footer-links a svg {
+    fill: #805d4a; /* Icon color */
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.footer-links a svg:hover {
+    fill: #cc9071;
+    transform: scale(1.2); /* Grow on hover */
+}
+
+.footer-links a:nth-child(1) svg { /* GitHub Icon */
+    width: 52px;
+    height: 52px;
+}
+
+.footer-links a:nth-child(2) svg { /* Instagram Icon */
+    width: 50px;
+    height: 50px;
+}
+
+.footer-links a:nth-child(3) svg { /* LinkedIn Icon */
+    width: 50px;
+    height: 50px;
+}
+
+.footer-links a:nth-child(4) svg { /* Email Icon */
+    width: 50px;
+    height: 50px;
+}
+/* 🔴️ footer 🔴️ */
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 500px) {

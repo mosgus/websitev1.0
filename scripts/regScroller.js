@@ -23,11 +23,7 @@ window.handleScroll = function () {
     let shitTitle = document.getElementById('shittitle')
     let resButton = document.getElementById('resButton');
     let projButton = document.getElementById('projButton');
-
-    if (!logo || !firstintro) {
-        console.error("❌ One or more elements not found! Check your IDs.");
-        return;
-    }
+    let footer = document.getElementById('footerContent');
 
     /** Introduction section */
     if (scrollPercentage > 0.04 ) {
@@ -53,7 +49,7 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section */
-    if (scrollPercentage >= 0.15 && scrollPercentage < 0.4) {
+    if (scrollPercentage >= 0.15 && scrollPercentage < 0.35) {
         body.style.background = "#639e65";  // Blue
         body.style.transition = 'all 1.0s ease';
 
@@ -61,7 +57,7 @@ window.handleScroll = function () {
         BGtitle.style.opacity = `1`;
         BGtitle.style.transition = 'all 1.5s ease';
 
-        if (scrollPercentage >= 0.2) {
+        if (scrollPercentage >= 0.17) {
             pfp.style.transform = `translateX(0px)`;
             pfp.style.opacity = `1`;
             pfp.style.transition = 'all 1.5s ease';
@@ -70,7 +66,7 @@ window.handleScroll = function () {
             BGintro.style.opacity = `1`;
             BGintro.style.transition = 'all 2s ease';
 
-            if (scrollPercentage >= 0.22) {
+            if (scrollPercentage >= 0.18) {
                 socials.style.transform = `translateX(0px)`;
                 socials.style.opacity = `1`;
                 socials.style.transition = 'all 1.5s ease';
@@ -104,65 +100,79 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.46 && scrollPercentage < 0.85) {
+    if (scrollPercentage >= 0.4 && scrollPercentage < 0.8) {
         body.style.background = "#83639e";  // Blue
-        body.style.transition = 'all 1s ease';
+        body.style.transition = 'all 1.5s ease';
 
-        if (scrollPercentage >= 0.5 ) {
+        if (scrollPercentage >= 0.41 ) {
             Syn_title.style.transform = `translateX(0px)`;
             Syn_title.style.opacity = `1`;
             Syn_title.style.transition = 'all 1s ease';
         }
 
-        if ( scrollPercentage >= 0.52 && scrollPercentage < 0.8) {
+        if ( scrollPercentage >= 0.42 && scrollPercentage < 0.78 ) {
             Syn_paragraph.style.transform = `translateX(0px)`;
             Syn_paragraph.style.opacity = `1`;
             Syn_paragraph.style.transition = 'all 1.5s ease';
+        } else {
+            Syn_paragraph.style.transform = `translateX(300px)`;
+            Syn_paragraph.style.opacity = `0`;
+            Syn_paragraph.style.transition = 'all 1s ease';
         }
 
-        if ( scrollPercentage >= 0.65 ) {
+        if ( scrollPercentage >= 0.6 && scrollPercentage < 0.78 ) {
             lineb.style.transform = `scaleX(1)`;
             lineb.style.opacity = `1`;
             lineb.style.transition = 'all 2s ease';
+        } else {
+            lineb.style.transform = `scaleX(0)`;
+            lineb.style.opacity = `0`;
+            lineb.style.transition = 'all 1.5s ease';
         }
 
     } else {
         Syn_title.style.transform = `translateX(-300px)`;
         Syn_title.style.opacity = `0`;
         Syn_title.style.transition = 'all 0.75s ease';
-
-        Syn_paragraph.style.transform = `translateX(300px)`;
-        Syn_paragraph.style.opacity = `0`;
-        Syn_paragraph.style.transition = 'all 1s ease';
-
-        lineb.style.transform = `scaleX(0)`;
-        lineb.style.opacity = `0`;
-        lineb.style.transition = 'all 1.5s ease';
     }
     /** StuffSection */
-    if (scrollPercentage >= 0.88 ) {
+    if (scrollPercentage >= 0.82 ) {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
 
-        shitTitle.style.transform = `translateX(0px)`;
-        shitTitle.style.opacity = `1`;
-        shitTitle.style.transition = 'all 1s ease';
-        resButton.style.transform = `translateX(0px)`;
-        resButton.style.opacity = `1`;
-        resButton.style.transition = 'all 1s ease';
-        projButton.style.transform = `translateX(0px)`;
-        projButton.style.opacity = `1`;
-        projButton.style.transition = 'all 1s ease';
-    } else {
-        shitTitle.style.transform = `translateX(400px)`;
-        shitTitle.style.opacity = `0`;
-        shitTitle.style.transition = 'all 1s ease';
-        resButton.style.transform = `translateX(-400px)`;
-        resButton.style.opacity = `0`;
-        resButton.style.transition = 'all 1s ease';
-        projButton.style.transform = `translateY(400px)`;
-        projButton.style.opacity = `0`;
-        projButton.style.transition = 'all 1s ease';
+        if (scrollPercentage >= 0.9 ) {
+            shitTitle.style.transform = `translateX(0px)`;
+            shitTitle.style.opacity = `1`;
+            shitTitle.style.transition = 'all 1s ease';
+            resButton.style.transform = `translateX(0px)`;
+            resButton.style.opacity = `1`;
+            resButton.style.transition = 'all 1s ease';
+            projButton.style.transform = `translateX(0px)`;
+            projButton.style.opacity = `1`;
+            projButton.style.transition = 'all 1s ease';
+        } else {
+            shitTitle.style.transform = `translateX(400px)`;
+            shitTitle.style.opacity = `0`;
+            shitTitle.style.transition = 'all 1s ease';
+            resButton.style.transform = `translateX(-400px)`;
+            resButton.style.opacity = `0`;
+            resButton.style.transition = 'all 1s ease';
+            projButton.style.transform = `translateY(400px)`;
+            projButton.style.opacity = `0`;
+            projButton.style.transition = 'all 1s ease';
+        }
+
+
+        if (scrollPercentage >= 0.99 ) {
+            footer.style.transform = `translateY(0px)`;
+            footer.style.opacity = `1`;
+            footer.style.transition = 'all 1s ease';
+        } else {
+            footer.style.transform = `translateY(400px)`;
+            footer.style.opacity = `1`;
+            footer.style.transition = 'all 1s ease';
+        }
+
     }
 
 };
