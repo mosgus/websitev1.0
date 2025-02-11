@@ -100,7 +100,7 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.4 && scrollPercentage < 0.8) {
+    if (scrollPercentage >= 0.4 && scrollPercentage < 0.82) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1.5s ease';
 
@@ -110,7 +110,7 @@ window.handleScroll = function () {
             Syn_title.style.transition = 'all 1s ease';
         }
 
-        if ( scrollPercentage >= 0.42 && scrollPercentage < 0.78 ) {
+        if ( scrollPercentage >= 0.42 && scrollPercentage < 0.8 ) {
             Syn_paragraph.style.transform = `translateX(0px)`;
             Syn_paragraph.style.opacity = `1`;
             Syn_paragraph.style.transition = 'all 1.5s ease';
@@ -120,14 +120,14 @@ window.handleScroll = function () {
             Syn_paragraph.style.transition = 'all 1s ease';
         }
 
-        if ( scrollPercentage >= 0.6 && scrollPercentage < 0.78 ) {
+        if ( scrollPercentage >= 0.6 && scrollPercentage < 0.8 ) {
             lineb.style.transform = `scaleX(1)`;
             lineb.style.opacity = `1`;
             lineb.style.transition = 'all 2s ease';
         } else {
             lineb.style.transform = `scaleX(0)`;
             lineb.style.opacity = `0`;
-            lineb.style.transition = 'all 1.5s ease';
+            lineb.style.transition = 'all 1s ease';
         }
 
     } else {
@@ -136,11 +136,11 @@ window.handleScroll = function () {
         Syn_title.style.transition = 'all 0.75s ease';
     }
     /** StuffSection */
-    if (scrollPercentage >= 0.82 ) {
+    if (scrollPercentage >= 0.85 ) {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
 
-        if (scrollPercentage >= 0.9 ) {
+        if (scrollPercentage >= 0.92 ) {
             shitTitle.style.transform = `translateX(0px)`;
             shitTitle.style.opacity = `1`;
             shitTitle.style.transition = 'all 1s ease';
