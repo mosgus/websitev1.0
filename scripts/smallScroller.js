@@ -52,7 +52,7 @@ window.handleScroll = function () {
         firstintro.style.transition = 'all 1s ease';
     }
     /** Overview section (starts at 20%) */
-    if (scrollPercentage >= 0.09 && scrollPercentage < 0.32) {
+    if (scrollPercentage >= 0.09 && scrollPercentage < 0.3) {
         body.style.background = "#639e65";  // #639e65 green
         body.style.transition = 'all 1.0s ease';
 
@@ -103,7 +103,7 @@ window.handleScroll = function () {
         linea.style.transition = 'all 2s ease';
     }
     /** Synopsis section */
-    if (scrollPercentage >= 0.36 && scrollPercentage < 0.92) {
+    if (scrollPercentage >= 0.32 && scrollPercentage < 0.88) {
         body.style.background = "#83639e";  // Blue
         body.style.transition = 'all 1.2s ease';
         if (scrollPercentage >= 0.24) {
@@ -136,7 +136,7 @@ window.handleScroll = function () {
         lineb.style.transition = 'all 1.5s ease';
     }
     /** StuffSection & Footer */
-    if (scrollPercentage >= 0.96 ) {
+    if (scrollPercentage >= 0.92 ) {
         body.style.background = "#ffba95";
         body.style.transition = 'all 1.5s ease';
         shitTitle.style.transform = `translateX(0px)`;
