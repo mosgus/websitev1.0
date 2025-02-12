@@ -27,8 +27,6 @@ body{
     font-size: 2.0em;
     text-decoration: none;
     position: fixed;
-
-
     white-space: nowrap;
 }
 
@@ -273,11 +271,11 @@ section{
     /*background-color: #805d4a; /* Background color */
     color: #805d4a; /* Text color */
     text-align: center;
-    font-family: 'Roboto Mono', monospace;
 }
 #footer .footer-content p {
     margin-bottom: 15px;
     font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
 }
 #footer .footer-links {
     display: flex;
@@ -425,7 +423,7 @@ section{
     }
     #overview .custom-lineA {
         width: 80%;
-        height: 2px;
+        height: 1px;
         display: block;
         margin: 15px auto;
         position: relative; /* Make sure it's properly positioned */
@@ -459,6 +457,10 @@ section{
     }
     /* 🔴️mystuff 🔴️ */
     /* ⚪️ footer ⚪️ */
+    #footer .footer-content p {
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
     #footer .footer-links {
         display: flex;
         justify-content: center;
