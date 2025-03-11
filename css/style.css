@@ -29,7 +29,6 @@ body{
     position: fixed;
     white-space: nowrap;
 }
-
 section{
     position: relative;
     width: 100%;
@@ -38,7 +37,6 @@ section{
     justify-content: center;
     align-items: center;
 }
-
 /* ⚪️ intro ⚪️ */
 #intro {
     display: flex;
@@ -81,8 +79,8 @@ section{
 #overview .BGtitle {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2.0em;
-    color: lightgreen;
-    text-shadow: #1f512e -8px 8px;
+    color: #f2e2d9;
+    text-shadow: #cc9071 -8px 8px;
     opacity: 0;
     white-space: nowrap;
 }
@@ -131,21 +129,21 @@ section{
 }
 #overview .BGintro { /* Hello im Gunnar - */
     max-width: 500px;
-    text-shadow: #558061 -6px 5px 5px;
+    text-shadow: #cc9071 -6px 5px 5px;
     opacity: 0;
 }
 #overview .heroText {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 2.6em;
-    color: #b4ffb4;
+    color: #f2e2d9;
 }
 #overview .heroText .name {
-    color: #fffd3d; /* Change the color for "Gunnar Balch" */
+    color: #e2d9f2; /* Change the color for "Gunnar Balch" */
 }
 #overview .devText {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 3em;
-    color: #fffd3d;
+    color: #e2d9f2;
 
     white-space: nowrap;
     display: inline-flex; /* Align cursor with text */
@@ -154,14 +152,14 @@ section{
 }
 #overview .typed-cursor {
     font-size: 1em;
-    color: #b4ffb4;
+    color: #f2e2d9;
     margin-left: -10px;
 }
 #overview .desc {
     padding-top: 25px;
     font-family: 'Roboto Light', sans-serif;
     font-size: 1.5em;
-    color: #b4ffb4;
+    color: #f2e2d9;
     line-height: 1.2;
     margin-top: 0;
 }
@@ -180,7 +178,6 @@ section{
 }
 #overview .social-links .social-icon img:hover {
     transform: scale(1.1);
-
 }
 #overview .social-links .social-iconB img {
     width: 56px;
@@ -194,7 +191,7 @@ section{
 #overview .custom-lineA {
     border: 0;
     height: 2px;
-    background: #b4ffb4;
+    background: #f2e2d9;
     margin: 20px auto;
     width: 80%;
     display: block;
@@ -213,8 +210,8 @@ section{
 #synopsis .Stitle {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 1.5em;
-    color: #d3a2ff;
-    text-shadow: #3f1f51 -8px 8px;
+    color: #fffaf1;
+    text-shadow: #bca58e -8px 8px;
     opacity: 0.5;
     align-self: flex-start;
 
@@ -222,8 +219,8 @@ section{
 #synopsis .synopsis-p {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 1em;
-    color: #c7ade1;
-    text-shadow: #3f1f51 -4px 4px 5px;
+    color: #fffaf1;
+    text-shadow: #bca58e -4px 4px 5px;
 
     margin: 25px 20px;
     text-align: justify;
@@ -236,7 +233,7 @@ section{
 #synopsis .custom-lineB {
     border: 0;
     height: 2px;
-    background: #ae8ac8;
+    background: #fffaf1;
     margin: 10px 0;
     width: 100%;
     margin-left: auto;
@@ -244,7 +241,7 @@ section{
 }
 /* 🔴️Synopsis 🔴️ */
 /* ⚪️ mystuff ⚪️ */
-#mystuff { /* body: #ffba95 */
+#mystuff {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -268,7 +265,6 @@ section{
 /* 🔴️ mystuff 🔴️ */
 /* ⚪️ footer ⚪️ */
 #footer {
-    /*background-color: #805d4a; /* Background color */
     color: #805d4a; /* Text color */
     text-align: center;
 }
@@ -347,10 +343,7 @@ section{
         min-height: 110vh;
     }
     #overview .BGtitle {
-        font-family: 'Press Start 2P', sans-serif;
         font-size: 1.6em;
-        color: lightgreen;
-        text-shadow: #1f512e -8px 8px;
         white-space: nowrap;
     }
     #overview .BGtp { /* contains slideshow and intro */

@@ -37,7 +37,7 @@ window.handleScroll = function () {
         }
 
     } else {
-        body.style.background = "#cdc1b7"; // Default off-white
+        body.style.background = "#cdc1b7"; //off-white
         body.style.transition = 'all 1s ease';
 
         logo.style.transform = `translateX(0px)`;
@@ -50,7 +50,7 @@ window.handleScroll = function () {
     }
     /** Overview section */
     if (scrollPercentage >= 0.15 && scrollPercentage < 0.35) {
-        body.style.background = "#639e65";  // Blue
+        body.style.background = "#e3c2b1";  // Blue
         body.style.transition = 'all 1.0s ease';
 
         BGtitle.style.transform = `translateY(0px)`;
@@ -101,7 +101,7 @@ window.handleScroll = function () {
     }
     /** Synopsis section */
     if (scrollPercentage >= 0.42 && scrollPercentage < 0.82) {
-        body.style.background = "#83639e";  // Blue
+        body.style.background = "#cdc1b7";  // Blue
         body.style.transition = 'all 1.5s ease';
 
         if (scrollPercentage >= 0.45 ) {
@@ -137,7 +137,7 @@ window.handleScroll = function () {
     }
     /** StuffSection */
     if (scrollPercentage >= 0.85 ) {
-        body.style.background = "#ffba95";
+        body.style.background = "#e3c2b1";
         body.style.transition = 'all 1.5s ease';
 
         if (scrollPercentage >= 0.92 ) {

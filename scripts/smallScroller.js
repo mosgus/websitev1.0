@@ -53,7 +53,7 @@ window.handleScroll = function () {
     }
     /** Overview section (starts at 20%) */
     if (scrollPercentage >= 0.09 && scrollPercentage < 0.32) {
-        body.style.background = "#639e65";  // #639e65 green
+        body.style.background = "#e3c2b1";  // #639e65 green
         body.style.transition = 'all 1.0s ease';
 
         BGtitle.style.transform = `translateY(0px)`;
@@ -104,7 +104,7 @@ window.handleScroll = function () {
     }
     /** Synopsis section */
     if (scrollPercentage >= 0.34 && scrollPercentage < 0.88) {
-        body.style.background = "#83639e";  // Blue
+        body.style.background = "#cdc1b7";  // Blue
         body.style.transition = 'all 1.2s ease';
         if (scrollPercentage >= 0.24) {
             Syn_title.style.transform = `translateX(0px)`;
@@ -137,7 +137,7 @@ window.handleScroll = function () {
     }
     /** StuffSection & Footer */
     if (scrollPercentage >= 0.92 ) {
-        body.style.background = "#ffba95";
+        body.style.background = "#e3c2b1";
         body.style.transition = 'all 1.5s ease';
         shitTitle.style.transform = `translateX(0px)`;
         shitTitle.style.opacity = `1`;
