@@ -2,9 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/projects.css">
+
 </head>
 <body>
+    <!-- Header (same as index.html) -->
+    <header id="header">
+        <a href="index.html" class="logo" id="logo">Gunnar Balch</a>
+        <h1 class="projhead" id="projhead">My Projects</h1>
+    </header>
 
+    <!-- Projects Section -->
+    <section class="scene" id="projects">
+
+        <div class="projects-grid" id="projectsContainer">
+            <!-- Projects are dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer id="footer">
+        <div class="footer-content" id="footerContent">
+            <p>&copy; 2025 GCMB</p>
+            <!-- Footer links same as index.html -->
+        </div>
+    </footer>
+
+    <script>
+        // Project data
+        const projects = [
+            {
+                title: "Project 1",
+                description: "Description of project 1",
+                image: "images/project1.jpg",
+                demoLink: "https://demo1.com",
+                githubLink: "https://github.com/yourusername/project1"
+            },
+            {
+                title: "Project 2",
+                description: "Description of project 2",
+                image: "images/project2.jpg",
+                demoLink: "https://demo2.com",
+                githubLink: "https://github.com/yourusername/project2"
+            }
+            // Add more projects as needed
+        ];
+
+        // Function to create project cards
+        function createProjectCards() {
+            const container = document.getElementById('projectsContainer');
+            
+            projects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                
+                card.innerHTML = `
+                    <img src="${project.image}" alt="${project.title}" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">${project.title}</h2>
+                        <p class="project-description">${project.description}</p>
+                        <div class="project-links">
+                            <a href="${project.demoLink}" class="project-link" target="_blank">Live Demo</a>
+                            <a href="${project.githubLink}" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // Call the function when the page loads
+        window.addEventListener('load', createProjectCards);
+    </script>
 </body>
 </html>
