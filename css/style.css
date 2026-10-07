@@ -115,11 +115,11 @@ section {
     font-size: clamp(1.4em, 3.6vw, 2.6em);
     color: #f2e2d9;
 }
-#overview .heroText .name { color: #e2d9f2; }
+#overview .heroText .name { color: #c4c5e3; }
 #overview .devText {
     font-family: 'Roboto Mono', sans-serif;
     font-size: clamp(1.4em, 4.2vw, 3em);
-    color: #e2d9f2;
+    color: #c4c5e3;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
@@ -145,7 +145,7 @@ section {
 #synopsis .Stitle {
     font-family: 'Press Start 2P', sans-serif;
     font-size: clamp(1.4em, 2.1vw, 1.5em);
-    color: #fffaf1;
+    color: #61553d;
     text-shadow: #bca58e -8px 8px;
     opacity: 0.5;
     align-self: flex-start;
@@ -154,7 +154,7 @@ section {
 #synopsis .synopsis-p {
     font-family: 'Roboto Mono', sans-serif;
     font-size: clamp(0.8em, 1.4vw, 1em);
-    color: #fffaf1;
+    color: #61553d;
     text-shadow: #bca58e -4px 4px 5px;
     max-width: 75ch;
     margin: 25px 20px;
@@ -165,7 +165,7 @@ section {
     gap: 10px;
 }
 #synopsis .synopsis-p p { margin: 10px 0; }
-#synopsis .custom-lineB { border: 0; height: 2px; background: #fffaf1; margin: 10px 0; width: 100%; }
+#synopsis .custom-lineB { border: 0; height: 2px; background: #61553d; margin: 10px 0; width: 100%; }
 #mystuff {
     display: flex;
     flex-direction: column;

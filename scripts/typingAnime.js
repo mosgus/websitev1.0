@@ -1,5 +1,5 @@
 new Typed('#typing-title', {
-    strings: ['⚪️','Hello World.', 'Welcome to my webpage!', 'This is my portfolio.'], // Texts to type
+    strings: ['⚪️','Hello World.', 'Welcome to my webpage!', 'Scroll down for more 👇'], // Texts to type
     typeSpeed: 100, // Speed of typing
     backSpeed: 50,  // Speed when deleting
     backDelay: 2000, // Pause before backspacing
@@ -7,7 +7,7 @@ new Typed('#typing-title', {
     loop: true,  // Enable looping of the animation
 });
 new Typed('#typing-dev', {
-    strings: ['Developer.', 'Investor.', 'Pilot.', 'SQL', 'Python', 'Javascript', 'HTML' ],
+    strings: ['Developer.', 'Investor.', 'Cool guy 😎','Pilot.', 'SQL', 'Python', 'Javascript', 'Typescript' ],
     typeSpeed: 100,
     backSpeed: 75,
     backDelay: 2000,
