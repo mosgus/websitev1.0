@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" href="images/favicon.png" >
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/resbutton.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    <script src="scripts/typingAnime.js" defer></script>
+    <script src="scripts/reveal.js" defer></script>
 </head>
 <body>
 
@@ -15,7 +18,7 @@
     <a href="#" class="logo" id="logo">Gunnar Balch</a>
 </header>
 <!-- Intro Section 📄 -->
-<section class="scene" id="intro">
+<section class="scene" id="intro" data-bg="#cdc1b7">
     <div class="message-wrapper">
         <h1 class="message" id="typing-title"></h1>
     </div>
@@ -24,13 +27,13 @@
     </div>
 </section>
 <!-- Overview Section 📄 -->
-<section class="scene" id="overview">
-    <h1 class="BGtitle" id="BGtitle">What I do</h1>
+<section class="scene" id="overview" data-bg="#e3c2b1">
+    <h1 class="BGtitle" id="BGtitle" data-reveal="right">What I do</h1>
     <div class="BGtp">
-        <div class="slideshow-container" id = "pfp">
+        <div class="slideshow-container" id="pfp" data-reveal="left" style="--delay: 0.15s">
             <img src="images/mug.png" alt="Slideshow image" class="slideshow-img"> <!-- The slideshow script contains other imgs-->
         </div>
-        <div class="BGintro" id="BGintro">
+        <div class="BGintro" id="BGintro" data-reveal="right" style="--delay: 0.3s">
             <h1 class="heroText">Hello, I'm<span class="name">Gunnar.</span></h1>
             <h1 class="devText">
                 <span id="typing-dev"></span>
@@ -38,57 +41,48 @@
             <h2 class="desc">A graduate student studying finance at Emory University with a bachelors in Computer Science from UGA.</h2>
         </div>
     </div>
-    <div class="social-links" id = "social-links">
-        <a href="https://www.linkedin.com/in/gunnarbalch/" target="_blank" class="social-icon">
-            <img src="images/linkedin.svg" alt="LinkedIn Profile">
-        </a>
-        <a href="https://github.com/mosgus" target="_blank" class="social-icon">
-            <img src="images/github.svg" alt="GitHub Profile">
-        </a>
-        <a href="https://www.instagram.com/gunnarcmb/" target="_blank" class="social-iconB">
-            <img src="images/IG.svg" alt="Instagram Profile">
-        </a>
-    </div>
-    <hr class="custom-lineA" id="custom-lineA">
+    <hr class="custom-lineA" id="custom-lineA" data-reveal="line" style="--delay: 0.45s">
 </section>
 <!-- Synopsis Section 📄 -->
-<section class="scene" id="synopsis">
-    <h1 class="Stitle" id="Stitle">Synopsis</h1>
-    <div class="synopsis-p" id="synopsis-p">
+<section class="scene" id="synopsis" data-bg="#cdc1b7">
+    <h1 class="Stitle" id="Stitle" data-reveal="left">Synopsis</h1>
+    <div class="synopsis-p" id="synopsis-p" data-reveal="right" style="--delay: 0.15s">
         <p>
-            My name is Gunnar Clyde Mckie Balch.
-            I am a 24-year-old computer scientist, investor, and aspiring innovator who's passionate about leveraging technology in the world of finance.
+            My name is Gunnar.
+            I am a 25-year-old computer scientist, investor, and aspiring innovator who's passionate about leveraging technology in the world of finance.
         </p>
         <p>
             I grew up in Atlanta, Georgia.
-            As a child, I spent much of my time playing and loving sports( football, basketball, and fishing ), which taught me teamwork, perseverance, and the importance of goal-setting.
-            Alongside my love for sports, I've always had a keen interest in technology and mechanics, often taking apart my toys and gadgets to figure out the inner workings and/or to rebuild them in my own way.
+            As a child, I spent much of my time playing and loving sports (football, basketball, and fishing), which taught me teamwork, perseverance, and the importance of goal-setting.
+            Alongside my love for sports, I've always had a keen interest in technology and mechanics, often taking apart my toys and gadgets to figure out how they worked and rebuild them in my own way.
         </p>
         <p>
-            It was this curiosity that sparked my passion for coding.
-            I began building and programming Lego Mindstorm robots and later explored game and server development through creating Minecraft mods and hosting/managing multiplayer servers.
-            My fascination with coding and technology has only grown since, and it's became clear that I should pursue a career where I could merge these skills with real-world applications.
+            This curiosity sparked my passion for coding.
+            I began building and programming Lego Mindstorm robots and later explored game development through creating Minecraft mods and hosting multiplayer servers.
+            My fascination with coding and technology has only grown, making it clear I should pursue a career merging technical skills with real-world applications in finance.
         </p>
         <p>
-            In the spring of 2020, I landed my first job as a cashier and line-cook at Bennett's Market & Deli.
-            However, my time there was short-lived due to COVID-19 lockdowns.
-            During that period, I rediscovered my passion for coding and technology, which ultimately led me to switch majors to Computer Science and transfer to the University of Georgia in the summer of 2021.
-            It was at UGA that I developed a deep interest in finance, sparked by a Computational Science course and helping organize ACM's 5th International Conference on AI in Finance(ICAIF).
-            In the fall of 2024, I earned my Bachelor of Science in Computer Science with a 3.53 GPA. GO DAWGS!
+            In 2024, I earned my Bachelor of Science in Computer Science from the University of Georgia with a 3.53 GPA, after transferring in 2021.
+            At UGA, I developed a deep interest in finance through computational coursework and helping organize the International Conference on AI in Finance (ICAIF).
         </p>
         <p>
-            Currently, I am pursuing a Master Of Finance degree at Emory University, Goizueta Business School, where I am currently working as a Teaching Assitant for 250+ students, I also serve as the Webmaster for ICAIF's webpages. I am also seeking job opportunities to expand my experience.
-            My ultimate goal is to build a fulfilling career in Computational Finance, where I can bridge my technical skills with my passion for innovation, analysis, and making profitable investments.
+            I am now pursuing a Master of Finance degree at Emory University's Goizueta Business School, graduating December 2026.
+            Currently, I serve as Full-Stack Software Engineer & Product Manager at Toccoa Capital Management (part-time), leading development of AI-powered financial platforms serving $100M+ in assets.
+            I also serve as Chief Operating Officer of Blue Eagle Capital Fund, where I built a production portfolio analytics dashboard managing $800K+ in securities.
+            As Teaching Assistant for 6 courses and Webmaster for ICAIF, I support 350+ students and manage 8 conference websites.
+        </p>
+        <p>
+            My ultimate goal is to build a fulfilling career in Computational Finance, bridging technical skills with innovation, financial analysis, and algorithmic investing.
         </p>
     </div>
-    <hr class="custom-lineB" id="custom-lineB">
+    <hr class="custom-lineB" id="custom-lineB" data-reveal="line">
 </section>
 <!-- Links Section 📄 -->
-<section class="scene" id="mystuff">
-    <h1 class="shittitle" id="shittitle">My Work</h1>
+<section class="scene" id="mystuff" data-bg="#e3c2b1">
+    <h1 class="shittitle" id="shittitle" data-reveal="right">My Work</h1>
     <!-- DOWNLOAD RESUME BUTTON. Used elements from: https://freefrontend.com/css-download-buttons/ -->
     <div class="button-wrapper">
-        <div class="button-container" id="resButton">
+        <div class="button-container" id="resButton" data-reveal="left" style="--delay: 0.1s">
             <a href="BGResPDF.pdf" download class="c-btn">
                 <span class="c-btn__label">
                     RESUME
@@ -99,7 +93,7 @@
             </a>
         </div>
         <!-- VISIT PROJECTS BUTTON -->
-        <div class="button-container" id="projButton">
+        <div class="button-container" id="projButton" data-reveal="up" style="--delay: 0.2s">
             <a href="https://github.com/mosgus" target="_blank" class="c-btn"> <!--was href="placeholder.html" -->
             <span class="c-btn__label">
                 PROJECTS
@@ -115,7 +109,7 @@
 </section>
 <!-- Footer -->
 <footer id="footer">
-    <div class="footer-content" id="footerContent">
+    <div class="footer-content" id="footerContent" data-reveal="up">
         <p>&copy; 2025 Gunnar Clyde Mckie Balch</p>
         <div class="footer-links">
             <!-- github -->
@@ -146,24 +140,12 @@
     </div>
 </footer>
 
-</body>
-</html>
-
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> <!-- library from CDN( Creates Typed Object ) -->
-<script src="scripts/typingAnime.js"> </script> <!-- Typing Script -->
 <script>
     /** LOAD */
     window.addEventListener('load', function () {
         const scrollGif = document.querySelector('.scroll-gif');
-        let Syn_title = document.getElementById('Stitle');
-        let Syn_paragraph = document.getElementById('synopsis-p');
-
-        BGtitle.style.transform = `translateX(-500px)`;
         scrollGif.style.transition = 'opacity 10s ease';
         setTimeout(() => { scrollGif.style.opacity = '1'; }, 6000); // fades in after Xms
-
-        Syn_title.style.opacity = `0`;
-        Syn_paragraph.style.opacity = `0`; // gets squeezed to top of page on mobile
     });
     /** SLIDESHOW */
     const images = [
@@ -179,8 +161,5 @@
     } // change image
     setInterval(updateImage, 8000); // ms
 </script> <!-- Slideshow & Gif Load Script -->
-<script src="scripts/scriptSwapper.js"> <!-- dynamically swaps scroll scripts-->
-
-</script>
-
-
+</body>
+</html>
